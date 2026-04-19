@@ -157,6 +157,20 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.section ul + h3,
+.section ol + h3 {
+    margin-top: 2rem;
+}
+
+.section ul + p,
+.section ol + p {
+    margin-top: 1.5rem;
+}
+
+.section h3 + p {
+    margin-top: 0.75rem;
+}
+
 /* Specs */
 .specs {
     background: var(--bg-light);
