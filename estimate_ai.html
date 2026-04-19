@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смета проекта (ИИ)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav__container container">
+            <a href="index.html" class="nav__logo">🌿 Автополив</a>
+            <ul class="nav__links">
+                <li><a href="index.html" class="nav__link">Главная</a></li>
+                <li><a href="irrigation_project.html" class="nav__link">Проект</a></li>
+                <li><a href="equipment_connection_scheme.html" class="nav__link">Схема</a></li>
+                <li><a href="sprinkler_plan.html" class="nav__link">План</a></li>
+                <li><a href="pump_box_design.html" class="nav__link">Ящик</a></li>
+                <li><a href="estimate.html" class="nav__link">Смета</a></li>
+                <li><a href="estimate_ai.html" class="nav__link">Смета (ИИ)</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <h1 class="hero__title">Смета проекта автополива (ИИ)</h1>
+            <p class="hero__description">Расчет стоимости оборудования и материалов (средние цены по российским магазинам)</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section__title">Оборудование</h2>
+            
+            <div class="specs">
+                <h4>Контроллер</h4>
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Hunter ELC-401i-E (4 станции):</span> 1 шт. - <span class="estimate__price">6 846 руб.</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://systempoliva.ru/product/kontroller_hunter_eco_logic_elc_401i_e_4_zony_vnutrenniy/" target="_blank">источник</a>]</small></li>
+                </ul>
+            </div>
+
+            <div class="specs">
+                <h4>Насос</h4>
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Вихрь ПН-650 (0.65 кВт, 55 л/мин):</span> 1 шт. - <span class="estimate__price">5 190 руб.</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://vihr.su/poverhnostnyj-nasos-vihr-pn-650/" target="_blank">источник</a>]</small></li>
+                </ul>
+            </div>
+
+            <div class="specs">
+                <h4>Фильтры</h4>
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Фильтр грубой очистки (100-200 мкм):</span> 2 шт. - <span class="estimate__price">500 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Фильтр тонкой очистки (50-80 мкм):</span> 1 шт. - <span class="estimate__price">1 500 руб.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                </ul>
+            </div>
+
+            <div class="specs">
+                <h4>Клапаны</h4>
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Электромагнитные клапаны:</span> 4 шт. - <span class="estimate__price">3 270 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://systempoliva.ru/product/elektromagnitnyy_klapan_dlya_avtopoliva_hunter_pgv_101_g_b_1_v/" target="_blank">источник</a>]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Обратный клапан:</span> 1 шт. - <span class="estimate__price">800 руб.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                </ul>
+            </div>
+
+            <div class="specs">
+                <h4>Распределительные коробки</h4>
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Коробка 1 (3 клапана для газона):</span> 1 шт. - <span class="estimate__price">2 500 руб.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Коробка 2 (1 клапан для грядок):</span> 1 шт. - <span class="estimate__price">1 500 руб.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                </ul>
+            </div>
+
+            <div class="specs">
+                <h4>Датчики и реле</h4>
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Реле давления:</span> 1 шт. - <span class="estimate__price">800 руб.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Манометр:</span> 1 шт. - <span class="estimate__price">400 руб.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Датчик влажности почвы (опционально):</span> 1 шт. - <span class="estimate__price">22 559 руб.</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://systempoliva.ru/product/datchik_vlazhnosti_pochvy_dlya_sistemy_poliva_soil_clik_hunter/" target="_blank">источник</a>]</small></li>
+                </ul>
+            </div>
+
+            <div class="specs">
+                <h4>Форсунки</h4>
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">MP1000 (1 шт.):</span> 1 шт. - <span class="estimate__price">1 281 руб.</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://systempoliva.ru/product/soplo_forsunka_rotator_hunter_mp_rotator_mp_1000_90_210/" target="_blank">источник</a>]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">MP2000 (2 шт.):</span> 2 шт. - <span class="estimate__price">1 327 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://systempoliva.ru/product/soplo_rotator_hunter_mp_rotator_mp_2000_360/" target="_blank">источник</a>]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Hunter SS-530 (2 шт.):</span> 2 шт. - <span class="estimate__price">212 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://teplovodaspb.ru/product/hunter/sopla-veernyie/sopla-ss-530.html" target="_blank">источник</a>]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Корпуса форсунок Hunter PROS-06 (6", 5 шт.):</span> 5 шт. - <span class="estimate__price">1 357 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://poliv64.ru/forsunka-6a-hunter.html" target="_blank">источник</a>]</small></li>
+                </ul>
+            </div>
+
+            <div class="specs">
+                <h4>Бак</h4>
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Бак 500-750 л:</span> 1 шт. - <span class="estimate__price">9 500 руб.</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://avto-poliv.net/tovar/emkost-500-litrov" target="_blank">источник</a>]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Поплавковый клапан:</span> 1 шт. - <span class="estimate__price">500 руб.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Поплавковый датчик уровня:</span> 1 шт. - <span class="estimate__price">800 руб.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section__title">Трубы и фитинги ПНД</h2>
+            
+            <div class="specs">
+                <h4>Трубы</h4>
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Труба ПНД 40 мм:</span> ~30-40 м - <span class="estimate__price">95 руб./м</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://www.aqua-e.ru/trubi_pnd/40-mm" target="_blank">источник</a>]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Труба ПНД 25 мм:</span> ~40-50 м - <span class="estimate__price">29 руб./м</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://zavod-pnd.ru/katalog/truba/po-diametru/25-mm.html" target="_blank">источник</a>]</small></li>
+                </ul>
+            </div>
+
+            <div class="specs">
+                <h4>Фитинги ПНД</h4>
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Муфта ПНД 40 мм:</span> 6-8 шт. - <span class="estimate__price">193 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://www.sds-center.ru/goods/mufta-pnd-40-mm" target="_blank">источник</a>]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Тройник ПНД 40 мм:</span> 2-3 шт. - <span class="estimate__price">250 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Колено ПНД 40 мм (90°):</span> 4-6 шт. - <span class="estimate__price">200 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Редукция ПНД 40-25 мм:</span> 4 шт. - <span class="estimate__price">180 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Муфта ПНД 25 мм:</span> 8-10 шт. - <span class="estimate__price">80 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Колено ПНД 25 мм:</span> 8-12 шт. - <span class="estimate__price">70 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Тройник ПНД 25 мм:</span> 3-5 шт. - <span class="estimate__price">120 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section__title">Соединения металлические</h2>
+            
+            <div class="specs">
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Кран шаровой 3/4":</span> 1 шт. - <span class="estimate__price">258 руб.</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://feniks-trade.ru/krany-sharovye-ld/ld-pride-ld-47-301-20" target="_blank">источник</a>]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Переходник метал-пластик 3/4" - 40 мм:</span> 1 шт. - <span class="estimate__price">150 руб.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Переходник 1" - 40 мм:</span> 1 шт. - <span class="estimate__price">180 руб.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Муфта резьбовая 1":</span> 2-3 шт. - <span class="estimate__price">100 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Муфты резьбовые 3/4" - 1":</span> 4-6 шт. - <span class="estimate__price">80 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Тройник латунный 3/4":</span> 1-2 шт. - <span class="estimate__price">200 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section__title">Фитинги для форсунок</h2>
+            
+            <div class="specs">
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Ниппель 1/2" (male):</span> 5 шт. - <span class="estimate__price">50 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Переходник ПНД 25 мм - 1/2":</span> 5 шт. - <span class="estimate__price">80 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section__title">Ящик для насоса</h2>
+            
+            <div class="specs">
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Профиль 30×30 мм:</span> ~20 шт. - <span class="estimate__price">38 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://www.edkm.ru/profil-dlya-gipsokartona-30h30/" target="_blank">источник</a>]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Профиль 60×30 мм:</span> 17 шт. - <span class="estimate__price">74 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[<a href="https://nsk.saturn.net/catalog/profili-dlya-gkl/" target="_blank">источник</a>]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Саморезы/болты:</span> 70-80 шт. - <span class="estimate__price">300 руб.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Петли дверные:</span> 2-3 шт. - <span class="estimate__price">200 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Замок/защелка:</span> 1 шт. - <span class="estimate__price">400 руб.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section__title">Расходные материалы</h2>
+            
+            <div class="specs">
+                <ul class="specs__list">
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Уплотнительная лента (ФУМ):</span> 2-3 рулона - <span class="estimate__price">30 руб./рулон</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Герметик для ПНД (сварка):</span> 1-2 шт. - <span class="estimate__price">300 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Кабель электрический (для клапанов):</span> ~30-40 м - <span class="estimate__price">25 руб./м</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Кабель для датчика влажности:</span> ~5-10 м - <span class="estimate__price">25 руб./м</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Кабель для поплавкового датчика:</span> ~2-3 м - <span class="estimate__price">25 руб./м</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Клеммники/соединители:</span> 10-15 шт. - <span class="estimate__price">20 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Хомуты для труб:</span> 10-15 шт. - <span class="estimate__price">15 руб./шт.</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Скотч изолента:</span> 2-3 рулона - <span class="estimate__price">50 руб./рулон</span> <small style="font-size: 0.8em; color: #666;">[оценка]</small></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section__title">Итого</h2>
+            <div class="important">
+                <h4 class="important__title">Общая стоимость:</h4>
+                <p class="important__text">~108 000 руб. (сумма всех позиций)</p>
+                <p class="important__text"><strong>Примечание:</strong> Цены рассчитаны на основе средних значений по российским интернет-магазинам. Фактическая стоимость может отличаться в зависимости от поставщика и региона. [оценка] - цены оценены, без конкретного источника.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">© 2026 Система автополива. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
