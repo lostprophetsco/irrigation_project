@@ -16,6 +16,7 @@
                 <li><a href="equipment_connection_scheme.html" class="nav__link">Схема</a></li>
                 <li><a href="sprinkler_plan.html" class="nav__link">План</a></li>
                 <li><a href="pump_box_design.html" class="nav__link">Ящик</a></li>
+                <li><a href="pnd_fittings_specification.html" class="nav__link">Фитинги</a></li>
                 <li><a href="estimate.html" class="nav__link">Смета</a></li>
                 <li><a href="estimate_ai.html" class="nav__link">Смета (ИИ)</a></li>
             </ul>
@@ -85,33 +86,109 @@
         <div class="scheme">
             <div class="scheme__component">Водопровод</div>
             <div class="scheme__arrow">↓</div>
-            <div class="scheme__component scheme__component--filter">Фильтр грубой очистки (для входящей воды, 100-200 мкм)</div>
+            <div class="scheme__component scheme__component--bak">
+                <strong>Тройник 25 мм (разделение потока)</strong><br>
+                <small>→ Система полива (фильтр → бак → насос → магистраль)</small><br>
+                <small>→ Бытовая магистраль (без фильтрации)</small>
+            </div>
+            <div class="scheme__arrow">↓</div>
+            <div class="scheme__component scheme__component--filter">
+                <strong>Фильтр грубой очистки</strong><br>
+                <small>(перед баком, 100-200 мкм)</small>
+            </div>
             <div class="scheme__arrow">↓</div>
             <div class="scheme__component scheme__component--bak">
                 <strong>Бак 500-750 л</strong><br>
-                <small>• Поплавковый клапан (поддержание уровня)</small><br>
-                <small>• Поплавковый датчик уровня (защита от сухого хода)</small>
+                <small>• Поплавковый клапан</small><br>
+                <small>• Поплавковый датчик</small>
             </div>
             <div class="scheme__arrow">↓</div>
-            <div class="scheme__component scheme__component--filter">Фильтр грубой очистки (перед насосом, 100-200 мкм)</div>
+            <div class="scheme__component scheme__component--filter">
+                <strong>Фильтр грубой очистки</strong><br>
+                <small>(перед насосом, 100-200 мкм)</small>
+            </div>
             <div class="scheme__arrow">↓</div>
-            <div class="scheme__component scheme__component--pump">Насос поверхностный с самовсасыванием</div>
+            <div class="scheme__component scheme__component--pump">
+                <strong>Насос</strong><br>
+                <small>поверхностный с самовсасыванием</small>
+            </div>
             <div class="scheme__arrow">↓</div>
             <div class="scheme__component scheme__component--check-valve">Обратный клапан</div>
             <div class="scheme__arrow">↓</div>
-            <div class="scheme__component" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">Фильтр тонкой очистки (в главной магистрали, 50-80 мкм)</div>
+            <div class="scheme__component" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
+                <strong>Фильтр тонкой очистки</strong><br>
+                <small>(50-80 мкм)</small>
+            </div>
             <div class="scheme__arrow">↓</div>
             <div class="scheme__component scheme__component--pressure-switch">Реле давления</div>
             <div class="scheme__arrow">↓</div>
             <div class="scheme__component scheme__component--manometer">Манометр</div>
             <div class="scheme__arrow">↓</div>
-            <div class="scheme__component scheme__component--magistral">Магистраль (40 мм ПНД)</div>
+            <div class="scheme__component scheme__component--magistral">
+                <strong>Магистраль (40 мм ПНД)</strong><br>
+                <small>→ Тройник (разветвление)</small>
+            </div>
             <div class="scheme__arrow">↓</div>
-            <div class="scheme__component scheme__component--distribution">Распределительная коробка 1 (3 клапана для газона)</div>
+            <div style="display: flex; gap: 20px;">
+                <div class="scheme__component scheme__component--distribution" style="flex: 1;">
+                    <strong>Распределительная коробка 1</strong><br>
+                    <small>(3 клапана для газона)</small>
+                </div>
+                <div class="scheme__component scheme__component--distribution" style="flex: 1;">
+                    <strong>Распределительная коробка 2</strong><br>
+                    <small>(1 клапан для грядок)</small>
+                </div>
+            </div>
             <div class="scheme__arrow">↓</div>
-            <div class="scheme__component scheme__component--distribution">Распределительная коробка 2 (1 клапан для грядок)</div>
+            <div style="display: flex; gap: 20px;">
+                <div class="scheme__component scheme__component--sprinklers" style="flex: 1;">
+                    <strong>Форсунки газона</strong><br>
+                    <small>3 шт. (MP1000, MP2000, MP2000)</small>
+                </div>
+                <div class="scheme__component scheme__component--sprinklers" style="flex: 1;">
+                    <strong>Стрип-спринклеры грядок</strong><br>
+                    <small>2 шт. (SS-530)</small>
+                </div>
+            </div>
+        </div>
+
+        <h2>Бытовая магистраль (водоразетки и раковины)</h2>
+        <div class="scheme">
+            <div class="scheme__component scheme__component--bak">
+                <strong>Тройник 25 мм (разделение потока)</strong>
+            </div>
             <div class="scheme__arrow">↓</div>
-            <div class="scheme__component scheme__component--sprinklers">Форсунки газона (3 шт.) + Стрип-спринклеры грядок (2 шт.)</div>
+            <div class="scheme__component" style="background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%); color: white;">
+                <strong>Бытовая магистраль (25 мм ПНД)</strong><br>
+                <small>водоразетки и раковины</small><br>
+                <small>(без фильтрации)</small>
+            </div>
+            <div class="scheme__arrow">↓</div>
+            <div style="display: flex; gap: 10px; justify-content: center;">
+                <div class="scheme__component" style="background: #ff5722; color: white; padding: 10px;">
+                    <strong>Р1</strong><br>
+                    <small>раковина</small>
+                </div>
+                <div class="scheme__component" style="background: #ff5722; color: white; padding: 10px;">
+                    <strong>Р2</strong><br>
+                    <small>раковина</small>
+                </div>
+            </div>
+            <div class="scheme__arrow">↓</div>
+            <div style="display: flex; gap: 10px; justify-content: center;">
+                <div class="scheme__component" style="background: #9c27b0; color: white; padding: 10px;">
+                    <strong>В1</strong><br>
+                    <small>водоразетка</small>
+                </div>
+                <div class="scheme__component" style="background: #9c27b0; color: white; padding: 10px;">
+                    <strong>В2</strong><br>
+                    <small>водоразетка</small>
+                </div>
+                <div class="scheme__component" style="background: #9c27b0; color: white; padding: 10px;">
+                    <strong>В3</strong><br>
+                    <small>водоразетка</small>
+                </div>
+            </div>
         </div>
 
         <h2>Фитинги, соединения и расходники</h2>

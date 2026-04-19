@@ -238,7 +238,7 @@ body {
 }
 
 .table__header,
-.table__cell {
+.table__row > td {
     padding: 1rem;
     text-align: left;
     border-bottom: 1px solid #e0e0e0;
@@ -644,6 +644,214 @@ body {
     font-family: monospace;
     color: #666;
     margin-left: auto;
+}
+
+/* Site Plan */
+.site-plan {
+    margin: 30px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: var(--bg-white);
+}
+
+.site-plan__title {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.site-plan__container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.site-plan__plot {
+    position: relative;
+}
+
+.site-plan__concrete {
+    position: absolute;
+    background: #9e9e9e;
+    border: 1px solid #666;
+}
+
+.site-plan__house {
+    position: absolute;
+    background: #ffccbc;
+    border: 2px solid #d84315;
+}
+
+.site-plan__terrace {
+    position: absolute;
+    background: #b3e5fc;
+    border: 2px solid #0277bd;
+}
+
+.site-plan__pump {
+    position: absolute;
+    background: #fff59d;
+    border: 2px solid #f9a825;
+    border-radius: 50%;
+}
+
+.site-plan__walkway {
+    position: absolute;
+    background: #d7ccc8;
+    border: 1px solid #8d6e63;
+}
+
+.site-plan__pipeline {
+    position: absolute;
+    background: #1976d2;
+    border: 2px dashed #0d47a1;
+    opacity: 0.7;
+}
+
+.site-plan__distribution {
+    position: absolute;
+    background: #ff9800;
+    border: 2px solid #e65100;
+    border-radius: 4px;
+}
+
+.site-plan__lawn {
+    position: absolute;
+    background: #e8f5e9;
+    border: 1px solid #4caf50;
+}
+
+.site-plan__label {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.site-plan__legend {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+.site-plan__legend h4 {
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+}
+
+.site-plan__legend ul {
+    margin-left: 1.5rem;
+    margin-bottom: 0;
+}
+
+.site-plan__legend li {
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.site-plan__legend-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.site-plan__legend-color {
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #333;
+}
+
+/* Fittings Specification */
+.fittings-spec {
+    margin: 30px 0;
+    padding: 20px;
+    background: var(--bg-light);
+    border-radius: 8px;
+}
+
+.fittings-spec h2 {
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.fittings-spec h3 {
+    color: var(--text-dark);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.fittings-spec h4 {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.fittings-spec p {
+    color: var(--text-light);
+    margin: 0.5rem 0;
+}
+
+.fittings-spec__note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+}
+
+.fittings-spec__note h4 {
+    color: #856404;
+    margin-bottom: 0.5rem;
+}
+
+.fittings-spec__note p {
+    color: #856404;
+    margin: 0.25rem 0;
+}
+
+.fittings-spec__warning {
+    background: #f8d7da;
+    border-left: 4px solid #f5c6cb;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+}
+
+.fittings-spec__warning h4 {
+    color: #721c24;
+    margin-bottom: 0.5rem;
+}
+
+.fittings-spec__warning p {
+    color: #721c24;
+    margin: 0.25rem 0;
+}
+
+.fittings-spec__total {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+}
+
+.fittings-spec__total h4 {
+    color: #155724;
+    margin-bottom: 0.5rem;
+}
+
+.fittings-spec__total p {
+    color: #155724;
+    margin: 0.25rem 0;
 }
 
 /* Responsive */

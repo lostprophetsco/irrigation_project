@@ -227,6 +227,7 @@
                 <li><a href="equipment_connection_scheme.html" class="nav__link">Схема</a></li>
                 <li><a href="sprinkler_plan.html" class="nav__link">План</a></li>
                 <li><a href="pump_box_design.html" class="nav__link">Ящик</a></li>
+                <li><a href="pnd_fittings_specification.html" class="nav__link">Фитинги</a></li>
                 <li><a href="estimate.html" class="nav__link">Смета</a></li>
                 <li><a href="estimate_ai.html" class="nav__link">Смета (ИИ)</a></li>
             </ul>
@@ -444,6 +445,141 @@
                 <li>Запустить систему полива для выгонки остатков воды через дренажные линии</li>
                 <li>Закрыть дренажные клапаны после полного слива</li>
             </ol>
+        </div>
+
+        <div class="section">
+            <h2 class="section__title">Бытовая водопроводная линия</h2>
+            <p><strong>Назначение:</strong> Обеспечение водой водоразеток и раковин на участке.</p>
+            <p><strong>Конструкция:</strong></p>
+            <ul>
+                <li>Бытовая линия 25 мм ПНД отводится от водопровода через тройник 25 мм</li>
+                <li>Разделение потока происходит через тройник 25 мм сразу после водопровода</li>
+                <li>Ветка к баку: Фильтр грубой очистки → Бак (для полива)</li>
+                <li><strong>Ветка бытовая: без фильтрации (идет напрямую от водопровода)</strong></li>
+                <li>Бытовая линия проложена вместе с поливной магистралью 40 мм в одной канализационной трубе 100 мм до распределительной коробки с клапанами для газона</li>
+                <li>В той же трубе проложена гофра с проводами для управления клапанами полива</li>
+                <li>3 водоразетки для подключения шлангов и поливочных устройств</li>
+                <li>2 точки подключения под раковины</li>
+            </ul>
+            <p><strong>Характеристики:</strong></p>
+            <ul>
+                <li>Диаметр трубы: 25 мм ПНД</li>
+                <li>Количество водоразеток: 3 шт.</li>
+                <li>Количество точек под раковину: 2 шт.</li>
+                <li>Прокладка: в одной трубе 100 мм с поливной магистралью и гофрой проводов (до распределительной коробки для газона)</li>
+            </ul>
+            <p><strong>Преимущества совместной прокладки:</strong></p>
+            <ul>
+                <li>Экономия земляных работ - только одна траншея</li>
+                <li>Упрощение монтажа и обслуживания</li>
+                <li>Защита труб от механических повреждений</li>
+            </ul>
+
+            <!-- Схема участка для бытовой линии -->
+            <h3>Схема участка (для бытовой линии)</h3>
+            <div class="scheme-container">
+                <div class="plot" style="width: 550px; height: 600px; position: relative">
+                    <!-- Масштаб: 1px = 0.02 м (50px = 1 м) -->
+
+                    <!-- Г-образный газон -->
+                    <!-- Верхняя часть: 11м = 550px, высота 4.5м = 225px -->
+                    <!-- Нижняя часть: 5м = 250px ширина, 7м = 350px длина -->
+
+                    <!-- Бетонная площадка 3.5x3 м = 175x150 px (левый верхний угол) -->
+                    <div class="concrete" style="width: 175px; height: 150px; top: 0; left: 0; z-index: 2">
+                        <div class="label" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3;">Беседка<br>3.5×3м</div>
+                    </div>
+
+                    <!-- Газон - верхняя часть -->
+                    <div class="lawn" style="position: absolute; top: 0; left: 0; width: 550px; height: 225px; z-index: 1;">
+                        <div class="label" style="top: -20px; right: 50%;">11м</div>
+                        <div class="label" style="top: 20%; right: 0;">4.5м</div>
+                    </div>
+
+                    <!-- Зона мангала (1×2 м = 50×100 px) - правый верхний угол верхней части газона -->
+                    <div class="barbecue-zone" style="top: 0; left: 500px; width: 50px; height: 100px; z-index: 3;">
+                        <div class="label" style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 8px;">Мангал</div>
+                    </div>
+
+                    <!-- Газон - нижняя часть (7x5 м = 350x250 px) -->
+                    <div class="lawn" style="position: absolute; top: 225px; left: 0; width: 250px; height: 350px;">
+                        <div class="label" style="top: 50%; right: 0;">7м</div>
+                        <div class="label" style="bottom: 0; right: 50%;">5м</div>
+                    </div>
+
+                    <!-- МАГИСТРАЛЬ (под землей, глубина 30см) -->
+                    <!-- Влево вдоль верхней части газона от распределительной коробки -->
+                    <div class="pipeline" style="width: 270px; height: 10px; top: 110px; left: 540px;"></div>
+
+                    <!-- БЫТОВАЯ МАГИСТРАЛЬ 25 мм (вместе с поливной магистралью в трубе 100мм) -->
+                    <div class="pipeline" style="width: 15px; height: 165px; top: 110px; left: 810px; background: #4caf50; border: 2px dashed #2e7d32;"></div>
+                    <div class="pipeline" style="width: 285px; height: 15px; top: 95px; left: 540px; background: #4caf50; border: 2px dashed #2e7d32;"></div>
+
+                    <!-- Разделение бытовой магистрали от распределительной коробки вверх по периметру мангала -->
+                    <div class="pipeline" style="width: 15px; height: 110px; top: 0px; left: 485px; z-index: 2; background: #4caf50; border: 2px dashed #2e7d32;"></div>
+                    <div class="pipeline" style="width: 435px; height: 15px; top: -15px; left: 150px; z-index: 2; background: #4caf50; border: 2px dashed #2e7d32;"></div>
+                    <div class="pipeline" style="width: 60px; height: 15px; top: 95px; left: 485px; z-index: 2; background: #4caf50; border: 2px dashed #2e7d32;"></div>
+
+                    <!-- Второе разветвление бытовой магистрали от коробки вниз до нижнего края верхнего газона -->
+                    <div class="pipeline" style="width: 15px; height: 105px; top: 120px; left: 535px; z-index: 2; background: #4caf50; border: 2px dashed #2e7d32;"></div>
+                    <div class="pipeline" style="width: 285px; height: 15px; top: 210px; left: 250px; z-index: 2; background: #4caf50; border: 2px dashed #2e7d32;"></div>
+                    <div class="pipeline" style="width: 15px; height: 365px; top: 210px; left: 235px; z-index: 2; background: #4caf50; border: 2px dashed #2e7d32;"></div>
+
+                    <!-- Водоразетки в местах поворотов этой ветки -->
+                    <div class="sprinkler" style="width: 15px; height: 15px; top: 210px; left: 535px; background: #9c27b0; border-radius: 50%; z-index: 5;">
+                        <div class="sprinkler-label" style="padding-top: 10px;">В1</div>
+                    </div>
+                    <div class="sprinkler" style="width: 15px; height: 15px; top: 210px; left: 235px; background: #9c27b0; border-radius: 50%; z-index: 5;">
+                        <div class="sprinkler-label" style="padding-top: 10px;">В2</div>
+                    </div>
+                    <div class="sprinkler" style="width: 15px; height: 15px; top: 560px; left: 235px; background: #9c27b0; border-radius: 50%; z-index: 5;">
+                        <div class="sprinkler-label" style="padding-top: 10px;">В3</div>
+                    </div>
+
+                    <!-- Точка под раковину на этой ветке -->
+                    <div class="sprinkler" style="width: 15px; height: 15px; top: -15px; left: 570px; background: #ff5722; border-radius: 50%; z-index: 5;">
+                        <div class="sprinkler-label" style="padding-top: 10px;">Р1</div>
+                    </div>
+
+                    <!-- Вторая точка под раковину в правом верхнем углу беседки -->
+                    <div class="sprinkler" style="width: 15px; height: 15px; top: -15px; left: 150px; background: #ff5722; border-radius: 50%; z-index: 5;">
+                        <div class="sprinkler-label" style="padding-top: 10px;">Р2</div>
+                    </div>
+
+                    <!-- Распределительная коробка с клапанами (в конце магистрали) -->
+                    <div class="distribution-box" style="width: 25px; height: 18.5px; top: 105px; left: 525px; z-index: 5;">
+                        <div class="label" style="top: -15px; left: 50%; transform: translateX(-50%); font-size: 6px;">РАСП.КОР.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legend">
+                <h4>Обозначения:</h4>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #e8f5e9;"></div>
+                    <span>Газон (требует полива)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #9e9e9e;"></div>
+                    <span>Бетонная площадка под беседку (полив не требуется)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #d7ccc8; border: 2px solid #8d6e63;"></div>
+                    <span>Зона мангала (полив не требуется)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #1976d2; border: 2px dashed #0d47a1;"></div>
+                    <span>Магистраль полива 40 мм (в трубе 100мм вместе с бытовой линией и гофрой проводов)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #4caf50; border: 2px dashed #2e7d32;"></div>
+                    <span>Бытовая линия 25 мм (в той же трубе 100мм)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ff9800;"></div>
+                    <span>Распределительная коробка с клапанами</span>
+                </div>
+            </div>
         </div>
 
     </div>

@@ -35,7 +35,7 @@
             <h2>Схема прямых соединений оборудования (до магистрали)</h2>
 
             <div class="section">
-                <h3>От водопровода к баку (1 дюйм)</h3>
+                <h3>Разделение потока от водопровода</h3>
                 <div class="table-container">
                     <table class="table">
                         <thead>
@@ -48,13 +48,52 @@
                         <tbody>
                             <tr class="table__row">
                                 <td>Водопровод (3/4")</td>
-                                <td>Кран шаровой 3/4"</td>
-                                <td>Фильтр грубой очистки (3/4")</td>
+                                <td>Кран шаровой 3/4" → МПН 3/4" (25 мм)</td>
+                                <td>Тройник ПНД 25 мм</td>
                             </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Ветвь 1: К баку (для полива)</h3>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
                             <tr class="table__row">
-                                <td>Фильтр грубой очистки (выход 3/4")</td>
-                                <td>МПН 3/4" (25 мм)</td>
+                                <th class="table__header">От</th>
+                                <th class="table__header">Фитинг</th>
+                                <th class="table__header">К</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__row">
+                                <td>Тройник ПНД 25 мм</td>
+                                <td>Фильтр грубой очистки (3/4") → МПН 3/4" (25 мм)</td>
                                 <td>Бак</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Ветвь 2: Бытовая магистраль (водоразетки и раковины, без фильтрации)</h3>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr class="table__row">
+                                <th class="table__header">От</th>
+                                <th class="table__header">Фитинг</th>
+                                <th class="table__header">К</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__row">
+                                <td>Тройник ПНД 25 мм</td>
+                                <td>Муфта ПНД 25 мм</td>
+                                <td>Бытовая магистраль (25 мм ПНД)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -260,28 +299,28 @@
                             <td>Тройник ПНД компрессионный</td>
                             <td>Компрессионный</td>
                             <td>25 мм × 20 мм × 20 мм</td>
-                            <td>3 шт.</td>
-                            <td>Переход к форсункам</td>
+                            <td>5 шт.</td>
+                            <td>Переход к форсункам (3 газон + 2 грядки)</td>
                         </tr>
                         <tr class="table__row">
                             <td>Муфта ПНД компрессионная</td>
                             <td>Компрессионная</td>
                             <td>20 мм</td>
-                            <td>3 шт.</td>
+                            <td>5 шт.</td>
                             <td>Соединение к форсункам</td>
                         </tr>
                         <tr class="table__row">
                             <td>Колено ПНД компрессионное 90°</td>
                             <td>Компрессионное</td>
                             <td>20 мм</td>
-                            <td>3 шт.</td>
+                            <td>5 шт.</td>
                             <td>Вывод к форсункам</td>
                         </tr>
                         <tr class="table__row">
                             <td>Переходник МПН 1/2" наружная</td>
                             <td>МПН (металл-ПНД)</td>
                             <td>20 мм (3/4") → 1/2"</td>
-                            <td>3 шт.</td>
+                            <td>5 шт.</td>
                             <td>Подключение к форсункам</td>
                         </tr>
                     </tbody>
@@ -290,7 +329,7 @@
         </div>
 
         <div class="section">
-            <h3>1.4. Дренажные линии (20 мм ПНД)</h3>
+            <h3>1.4. Дренажные линии (25 мм + 20 мм ПНД)</h3>
             <div class="table-container">
                 <table class="table">
                     <thead>
@@ -306,47 +345,241 @@
                         <tr class="table__row">
                             <td>Тройник ПНД компрессионный</td>
                             <td>Компрессионный</td>
-                            <td>20 мм × 20 мм × 20 мм</td>
-                            <td>3 шт.</td>
-                            <td>Подключение дренажных линий к дождевателям</td>
+                            <td>25 мм × 25 мм × 20 мм</td>
+                            <td>4 шт.</td>
+                            <td>Разделение потока: 25 мм к колодцу, 20 мм к дождевателю (4 линии)</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td>Муфта ПНД компрессионная</td>
+                            <td>Компрессионная</td>
+                            <td>25 мм</td>
+                            <td>4 шт.</td>
+                            <td>Соединение магистрали 25 мм к колодцам</td>
                         </tr>
                         <tr class="table__row">
                             <td>Муфта ПНД компрессионная</td>
                             <td>Компрессионная</td>
                             <td>20 мм</td>
-                            <td>3 шт.</td>
-                            <td>Соединение участков дренажных линий</td>
+                            <td>4 шт.</td>
+                            <td>Соединение ответвления 20 мм к дождевателям</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td>Колено ПНД компрессионное 90°</td>
+                            <td>Компрессионное</td>
+                            <td>25 мм</td>
+                            <td>4 шт.</td>
+                            <td>Повороты магистрали 25 мм к колодцам</td>
                         </tr>
                         <tr class="table__row">
                             <td>Колено ПНД компрессионное 90°</td>
                             <td>Компрессионное</td>
                             <td>20 мм</td>
-                            <td>3 шт.</td>
-                            <td>Повороты к дренажным колодцам</td>
+                            <td>4 шт.</td>
+                            <td>Повороты ответвления 20 мм к дождевателям</td>
                         </tr>
                         <tr class="table__row">
                             <td>Дренажный клапан</td>
                             <td>Шаровой</td>
-                            <td>20 мм (3/4")</td>
+                            <td>25 мм (1")</td>
                             <td>3 шт.</td>
-                            <td>Открытие/закрытие дренажа в колодцах</td>
+                            <td>Открытие/закрытие дренажа в колодцах (3 колодца)</td>
                         </tr>
                         <tr class="table__row">
                             <td>Дренажный колодец</td>
                             <td>Пластиковый (минимальный)</td>
                             <td>160 мм (диаметр) × 600 мм (глубина)</td>
                             <td>3 шт.</td>
-                            <td>Сбор и отвод воды на левом краю газона</td>
+                            <td>Сбор и отвод воды в газонной секции</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td>Заглушка ПНД</td>
+                            <td>Компрессионная</td>
+                            <td>25 мм</td>
+                            <td>1 шт.</td>
+                            <td>Конец дренажной линии в грядках (после 2 дождевателей)</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <h2>2. Надземная часть (соединение оборудования)</h2>
+        <div class="fittings-spec">
+            <h2>2. Бытовая магистраль (водоразетки и раковины)</h2>
+
+            <div class="fittings-spec__note">
+                <h4>📝 Примечание</h4>
+                <p>Бытовая магистраль (25 мм ПНД) прокладывается совместно с поливной магистралью в трубе 100 мм до распределительной коробки с клапанами для газона. После коробки разделяется на две ветки: к раковинам (Р1, Р2) и к водоразеткам (В1, В2, В3).</p>
+            </div>
+
+            <div class="section">
+                <h3>2.1. Магистраль и разветвления (25 мм ПНД)</h3>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr class="table__row">
+                                <th class="table__header">Наименование</th>
+                                <th class="table__header">Тип фитинга</th>
+                                <th class="table__header">Диаметр</th>
+                                <th class="table__header">Количество</th>
+                                <th class="table__header">Назначение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__row">
+                                <td>Труба ПНД 25 мм</td>
+                                <td>ПНД</td>
+                                <td>25 мм</td>
+                                <td>50 м (8 бухт по 6м + 2м)</td>
+                                <td>Бытовая магистраль и ответвления</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Тройник ПНД 25 мм</td>
+                                <td>Компрессионный</td>
+                                <td>25 мм</td>
+                                <td>3 шт.</td>
+                                <td>Разделение от поливной магистрали, разветвления на Р1/Р2 и В1/В2/В3</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Колено ПНД 25 мм (90°)</td>
+                                <td>Компрессионное</td>
+                                <td>25 мм</td>
+                                <td>7 шт.</td>
+                                <td>Повороты магистрали по схеме</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Муфта ПНД 25 мм</td>
+                                <td>Компрессионная</td>
+                                <td>25 мм</td>
+                                <td>8 шт.</td>
+                                <td>Соединения труб</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>2.2. Точки под раковины (Р1, Р2)</h3>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr class="table__row">
+                                <th class="table__header">Наименование</th>
+                                <th class="table__header">Тип фитинга</th>
+                                <th class="table__header">Диаметр</th>
+                                <th class="table__header">Количество</th>
+                                <th class="table__header">Назначение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__row">
+                                <td>МПН переходник</td>
+                                <td>МПН (металл-ПНД)</td>
+                                <td>25 мм → резьба 1/2"</td>
+                                <td>2 шт.</td>
+                                <td>Подключение кранов для Р1 и Р2</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Кран шаровой</td>
+                                <td>Шаровой</td>
+                                <td>1/2"</td>
+                                <td>2 шт.</td>
+                                <td>Отключение воды в точках Р1 и Р2</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>ФУМ-лента</td>
+                                <td>Уплотнитель</td>
+                                <td>-</td>
+                                <td>1 рулон</td>
+                                <td>Герметизация резьбовых соединений</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>2.3. Водоразетки (В1, В2, В3)</h3>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr class="table__row">
+                                <th class="table__header">Наименование</th>
+                                <th class="table__header">Тип фитинга</th>
+                                <th class="table__header">Диаметр</th>
+                                <th class="table__header">Количество</th>
+                                <th class="table__header">Назначение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__row">
+                                <td>МПН переходник</td>
+                                <td>МПН (металл-ПНД)</td>
+                                <td>25 мм → резьба 3/4"</td>
+                                <td>3 шт.</td>
+                                <td>Подключение быстросъемов для В1, В2, В3</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Быстросъемное соединение</td>
+                                <td>Быстросъем</td>
+                                <td>3/4"</td>
+                                <td>3 шт.</td>
+                                <td>Подключение переносного шланга</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Кран шаровой</td>
+                                <td>Шаровой</td>
+                                <td>3/4"</td>
+                                <td>3 шт.</td>
+                                <td>Отключение воды в точках В1, В2, В3</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Короб вкапываемый с крышкой</td>
+                                <td>Пластиковый</td>
+                                <td>Стандартный</td>
+                                <td>3 шт.</td>
+                                <td>Доступ к водоразеткам В1, В2, В3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>2.4. Крепеж и расходники</h3>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr class="table__row">
+                                <th class="table__header">Наименование</th>
+                                <th class="table__header">Тип</th>
+                                <th class="table__header">Количество</th>
+                                <th class="table__header">Назначение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__row">
+                                <td>Хомут для крепления труб</td>
+                                <td>Крепеж</td>
+                                <td>10-15 шт.</td>
+                                <td>Крепление труб к стенам/ограждениям</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Изоляционная лента</td>
+                                <td>Изоляция</td>
+                                <td>1 рулон</td>
+                                <td>Изоляция соединений</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <h2>3. Надземная часть (соединение оборудования)</h2>
 
         <div class="section">
-            <h3>2.1. Соединение фильтра для входящей воды (1 дюйм)</h3>
+            <h3>3.1. Разделение потока от водопровода</h3>
             <div class="table-container">
                 <table class="table">
                     <thead>
@@ -371,7 +604,14 @@
                             <td>МПН (металл-ПНД)</td>
                             <td>3/4" → 25 мм</td>
                             <td>1 шт.</td>
-                            <td>Подключение фильтра к ПНД 25 мм</td>
+                            <td>Подключение к ПНД 25 мм</td>
+                        </tr>
+                        <tr class="table__row">
+                            <td>Тройник ПНД 25 мм</td>
+                            <td>Компрессионный</td>
+                            <td>25 мм</td>
+                            <td>1 шт.</td>
+                            <td>Разделение потока (бак/бытовая магистраль)</td>
                         </tr>
                     </tbody>
                 </table>
@@ -379,7 +619,7 @@
         </div>
 
         <div class="section">
-            <h3>2.2. Соединение фильтра перед насосом (1 дюйм)</h3>
+            <h3>3.2. Соединение фильтра перед насосом (1 дюйм)</h3>
             <div class="table-container">
                 <table class="table">
                     <thead>
@@ -405,7 +645,7 @@
         </div>
 
         <div class="section">
-            <h3>2.3. Соединение насоса, обратного клапана и фильтра тонкой очистки (40 мм)</h3>
+            <h3>3.3. Соединение насоса, обратного клапана и фильтра тонкой очистки (40 мм)</h3>
             <div class="table-container">
                 <table class="table">
                     <thead>
@@ -445,7 +685,7 @@
         </div>
 
         <div class="section">
-            <h3>2.4. Соединение реле давления и манометра</h3>
+            <h3>3.4. Соединение реле давления и манометра</h3>
             <div class="table-container">
                 <table class="table">
                     <thead>
@@ -470,10 +710,10 @@
             </div>
         </div>
 
-        <h2>3. Дополнительные компоненты</h2>
+        <h2>4. Дополнительные компоненты</h2>
 
         <div class="section">
-            <h3>3.1. Крепежные элементы</h3>
+            <h3>4.1. Крепежные элементы</h3>
             <div class="table-container">
                 <table class="table">
                     <thead>
