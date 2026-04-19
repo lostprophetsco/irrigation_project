@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Схемы участка автополива</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .scheme {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .scheme-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        /* Масштаб: 1px = 0.02 м (50px = 1м) */
+        .plot {
+            position: relative;
+        }
+        .concrete {
+            position: absolute;
+            background: #9e9e9e;
+            border: 1px solid #666;
+        }
+        .house {
+            position: absolute;
+            background: #ffccbc;
+            border: 2px solid #d84315;
+        }
+        .terrace {
+            position: absolute;
+            background: #b3e5fc;
+            border: 2px solid #0277bd;
+        }
+        .pump {
+            position: absolute;
+            background: #fff59d;
+            border: 2px solid #f9a825;
+            border-radius: 50%;
+        }
+        .walkway {
+            position: absolute;
+            background: #d7ccc8;
+            border: 1px solid #8d6e63;
+        }
+        .pipeline {
+            position: absolute;
+            background: #1976d2;
+            border: 2px dashed #0d47a1;
+            opacity: 0.7;
+        }
+        .distribution-box {
+            position: absolute;
+            background: #ff9800;
+            border: 2px solid #e65100;
+            border-radius: 4px;
+        }
+        .label {
+            position: absolute;
+            font-size: 12px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+        .legend {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 4px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .legend-color {
+            width: 30px;
+            height: 20px;
+            margin-right: 10px;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Схемы участка автополива газона</h1>
+        <p><strong>Масштаб:</strong> 1px = 0.02 м (50px = 1 м)</p>
+
+        <!-- План газона -->
+        <div class="scheme">
+            <h2>План газона</h2>
+            <div class="scheme-container">
+                <div class="plot" style="width: 550px; height: 600px; margin-top: 20px;">
+                    <!-- Г-образный газон -->
+                    <!-- Масштаб: 1px = 0.02 м (50px = 1 м) -->
+                    <!-- Верхняя часть: 11м = 550px, высота 4.5м = 225px -->
+                    <!-- Нижняя часть: 5м = 250px ширина, 7м = 350px длина -->
+                    <!-- Стыковка в левом нижнем углу верхней площадки -->
+
+                    <!-- Бетонная площадка 3.5x3 м = 175x150 px (левый верхний угол) -->
+                    <div class="concrete" style="width: 175px; height: 150px; top: 0; left: 0; z-index: 2">
+                        <div class="label" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3;">Беседка<br>3.5×3м</div>
+                    </div>
+
+                    <!-- Газон - верхняя часть (справа от бетонной площадки) -->
+                    <div style="position: absolute; top: 0; left: 0; width: 550px; height: 225px; z-index: 1; background: #e8f5e9; border: 1px solid #4caf50;">
+                      <div class="label" style="top: -20px; right: 50%; z-index: 1; ">Длина 11м</div>
+                      <div class="label" style="top: 50%; right: 0; z-index: 1; ">Длина 4.5м</div>
+                    </div>
+
+
+                    <!-- Газон - нижняя часть (стыкуется с верхней в левом нижнем углу) -->
+                    <div style="position: absolute; top: 225px; left: 0; width: 250px; height: 350px; background: #e8f5e9; border: 1px solid #4caf50;">
+                      <div class="label" style="top: 50%; right: 0px;">7м</div>
+                      <div class="label" style="bottom: 0px; right: 50%; ">5м</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="legend">
+                <h3>Размеры участка (Г-образная форма):</h3>
+                <ul>
+                    <li>Верхняя часть: 11 м (длина) × 4.5 м (высота)</li>
+                    <li>Нижняя часть: 7 м (ширина) × 5 м (длина)</li>
+                    <li>Бетонная площадка: 3.5 × 3 м (левый верхний угол, полив не требуется)</li>
+                    <li>Площадь полива (без беседки): 74 кв.м.</li>
+                    <li>Стыковка: нижняя часть стыкуется с верхней в левом нижнем углу</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- План дома с террасой -->
+        <div class="scheme">
+            <h2>План дома с террасой</h2>
+            <div class="scheme-container">
+                <div class="plot" style="width: 500px; height: 850px; background: #fafafa;">
+                    <!-- Дом 10x12 м = 500x600 px -->
+                    <div class="house" style="width: 500px; height: 600px; top: 150px; left: 0;">
+                      <div class="label" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">ДОМ<br>10×12м</div>
+                    </div>
+
+
+                    <!-- Терраса 4x3 м = 200x150 px (за пределами дома, справа) -->
+                    <div class="terrace" style="width: 200px; height: 150px; top: -2px; right: -4px; z-index: 2">
+                      <div class="label" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3">ТЕРРАСА<br>4×3м</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="legend">
+                <h3>Размеры:</h3>
+                <ul>
+                    <li>Дом: 10 м (ширина) × 12 м (длина)</li>
+                    <li>Терраса: 4 м (длина) × 3 м (ширина)</li>
+                </ul>
+                <p><strong>Расположение:</strong> Терраса в верхнем правом углу дома</p>
+            </div>
+        </div>
+
+        <!-- Общий план участка -->
+        <div class="scheme">
+            <h2>Общий план участка</h2>
+            <div class="scheme-container">
+                <div class="plot" style="width: 1000px; height: 950px; position: relative">
+                    <!-- 1px = 0.02 м -->
+                    <!-- Объединение плана газона и плана дома с террасой -->
+
+                    <!-- ГАЗОН (из плана газона) -->
+                    <!-- Бетонная площадка 3.5x3 м = 175x150 px (левый верхний угол) -->
+                    <div class="concrete" style="width: 175px; height: 150px; top: 0; left: 0; z-index: 2">
+                        <div class="label" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3;">Беседка<br>3.5×3м</div>
+                    </div>
+
+                    <!-- Газон - верхняя часть (11x4.5 м = 550x225 px) -->
+                    <div style="position: absolute; top: 0; left: 0; width: 550px; height: 225px; z-index: 1; background: #e8f5e9; border: 1px solid #4caf50;">
+                        <div class="label" style="top: 0px; left: 370px;">11м</div>
+                        <div class="label" style="top: 105px; left: 490px; font-size: 10px;">4.5м</div>
+                    </div>
+
+                    <!-- Газон - нижняя часть (7x5 м = 350x250 px) -->
+                    <div style="position: absolute; top: 225px; left: 0; width: 250px; height: 350px; background: #e8f5e9; border: 1px solid #4caf50;">
+                        <div class="label" style="top: 50%; right: 0px;">7м</div>
+                        <div class="label" style="bottom: 0px; right: 50%; ">5м</div>
+                    </div>
+
+                    <!-- ДОМ И ТЕРРАСА (из плана дома с террасой) -->
+                    <!-- Дом 10x12 м = 500x600 px -->
+                  <div class="plot" style="width: 500px; height: 850px; left: 300px; top: 125px; background: #fafafa;">
+                    <div class="house" style="width: 500px; height: 600px; top: 150px; left: 0;">
+                      <div class="label" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">ДОМ<br>10×12м</div>
+                    </div>
+
+
+                    <!-- Терраса 4x3 м = 200x150 px (за пределами дома, справа) -->
+                    <div class="terrace" style="width: 200px; height: 150px; top: -2px; right: -4px; z-index: 2">
+                      <div class="label" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3">ТЕРРАСА<br>4×3м</div>
+                    </div>
+
+                  </div>
+
+                    <!-- ДОРОЖКА (ширина 1м = 50px) между газоном и домом -->
+                    <div class="walkway" style="width: 50px; height: 350px; top: 225px; left: 250px; z-index: 1;">
+                        <div class="label" style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 10px;">1м</div>
+                    </div>
+                    <!-- ДОРОЖКА (ширина 1м = 50px) сверху от дома -->
+                    <div class="walkway" style="width: 300px; height: 50px; top: 225px; left: 300px; z-index: 1;">
+                        <div class="label" style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 10px;">6м</div>
+                    </div>
+
+                    <!-- Место монтажа бака -->
+                    <div class="pump" style="width: 40px; height: 40px; top: 275px; left: 800px;">
+                        <div class="label" style="top: 55px; left: 830px; font-size: 10px;">БАК<br>НАСОС<br>КОНТР.</div>
+                    </div>
+
+                    <!-- МАГИСТРАЛЬ (под землей, глубина 30см) -->
+                    <!-- Вверх вдоль правого бока террасы -->
+                    <div class="pipeline" style="width: 10px; height: 155px; top: 120px; left: 800px;"></div>
+                    <!-- Влево вдоль верхней части террасы в газон (5м = 250px) -->
+                    <div class="pipeline" style="width: 270px; height: 10px; top: 110px; left: 540px;"></div>
+
+                    <!-- Распределительная коробка с клапанами (в конце магистрали) -->
+                    <div class="distribution-box" style="width: 25px; height: 18.5px; top: 105px; left: 525px; z-index: 5;">
+                        <div class="label" style="top: -15px; left: 50%; transform: translateX(-50%); font-size: 6px;">РАСП.КОР.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="legend">
+                <h3>Обозначения:</h3>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #9e9e9e;"></div>
+                    <span>Бетонная площадка под беседку (левый верхний угол, полив не требуется)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ffccbc;"></div>
+                    <span>Дом (центральная часть)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #b3e5fc;"></div>
+                    <span>Терраса</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #d7ccc8;"></div>
+                    <span>Дорожка (ширина 1 м, между газоном и домом)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #1976d2; border: 2px dashed #0d47a1;"></div>
+                    <span>Магистраль (под землей, глубина 30см, длина ~8.5м)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ff9800;"></div>
+                    <span>Распределительная коробка с клапанами</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #fff59d; border-radius: 50%;"></div>
+                    <span>Место монтажа бака, насоса и контроллера</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #e8f5e9;"></div>
+                    <span>Газон (требует полива)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

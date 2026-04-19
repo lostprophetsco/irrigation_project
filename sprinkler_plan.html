@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>План полива - Расположение форсунок</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">🌿 Автополив</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="irrigation_project.html">Проект</a></li>
+                <li><a href="equipment_connection_scheme.html">Схема подключения</a></li>
+                <li><a href="sprinkler_plan.html">План полива</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <h1>План полива - Расположение форсунок</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="scheme">
+            <style>
+        .scheme-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .plot {
+            position: relative;
+            background: #fafafa;
+            border: 2px solid #333;
+        }
+
+        .concrete {
+            position: absolute;
+            background: #9e9e9e;
+            border: 1px solid #757575;
+        }
+
+        .lawn {
+            position: absolute;
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+        }
+
+        .garden-bed {
+            position: absolute;
+            background: #c8e6c9;
+            border: 2px solid #388e3c;
+        }
+
+        .sprinkler {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #ff5722;
+            border-radius: 50%;
+            border: 2px solid #d84315;
+            z-index: 10;
+        }
+
+        .sprinkler-label {
+            position: absolute;
+            font-size: 12px;
+            font-weight: bold;
+            color: #d84315;
+            z-index: 11;
+        }
+
+        .spray-sector {
+            position: absolute;
+            background: rgba(33, 150, 243, 0.2);
+            border: 2px solid #2196f3;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .spray-sector-directed {
+            position: absolute;
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.3) 0%, rgba(33, 150, 243, 0.1) 100%);
+            border: 2px solid #2196f3;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .spray-sector-270 {
+            position: absolute;
+            background: conic-gradient(from 180deg, rgba(33, 150, 243, 0.3) 0deg, rgba(33, 150, 243, 0.3) 270deg, transparent 270deg);
+            border: 2px solid #2196f3;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .spray-arrow {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 15px solid #2196f3;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        .spray-zone {
+            position: absolute;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .house {
+            position: absolute;
+            background: #ffccbc;
+            border: 2px solid #ff9800;
+        }
+
+        .terrace {
+            position: absolute;
+            background: #ffe0b2;
+            border: 2px solid #ffb74d;
+        }
+
+        .pipeline {
+            position: absolute;
+            background: #1976d2;
+            border: 2px dashed #0d47a1;
+            opacity: 0.7;
+        }
+
+        .pipe-to-sprinkler {
+            position: absolute;
+            background: #616161;
+            border: 1px solid #424242;
+            z-index: 6;
+        }
+
+        .drainage-line {
+            position: absolute;
+            background: #795548;
+            border: 1px solid #5d4037;
+            z-index: 4;
+        }
+
+        .drainage-well {
+            position: absolute;
+            background: #8d6e63;
+            border: 2px solid #5d4037;
+            border-radius: 50%;
+            z-index: 7;
+        }
+
+        .drainage-valve {
+            position: absolute;
+            background: #a1887f;
+            border: 1px solid #5d4037;
+            border-radius: 2px;
+            z-index: 7;
+        }
+
+        .distribution-box {
+            position: absolute;
+            background: #ff9800;
+            border: 2px solid #e65100;
+            border-radius: 4px;
+        }
+
+        .label {
+            position: absolute;
+            font-size: 12px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+
+        .legend {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        .legend h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+        }
+
+        .legend-color {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .sprinkler-info {
+            background: #fff3e0;
+            padding: 5px;
+            border-radius: 4px;
+            border-left: 4px solid #ff5722;
+            position: absolute;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .barbecue-zone {
+            position: absolute;
+            background: #d7ccc8;
+            border: 2px solid #8d6e63;
+            border-radius: 2px;
+        }
+
+        .sprinkler-info h3 {
+            margin-top: 0;
+            color: #ff5722;
+        }
+
+        .sprinkler-info ul {
+            margin-bottom: 0;
+        }
+
+        .sprinkler-info li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>План полива - Расположение форсунок</h1>
+
+    <div class="scheme">
+        <h2>Схема расположения форсунок и секторов полива</h2>
+        <div class="scheme-container">
+            <div class="plot" style="width: 550px; height: 600px; position: relative">
+                <!-- Масштаб: 1px = 0.02 м (50px = 1 м) -->
+
+                <!-- Г-образный газон -->
+                <!-- Верхняя часть: 11м = 550px, высота 4.5м = 225px -->
+                <!-- Нижняя часть: 5м = 250px ширина, 7м = 350px длина -->
+
+                <!-- Бетонная площадка 3.5x3 м = 175x150 px (левый верхний угол) -->
+                <div class="concrete" style="width: 175px; height: 150px; top: 0; left: 0; z-index: 2">
+                    <div class="label" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3;">Беседка<br>3.5×3м</div>
+                </div>
+
+                <!-- Газон - верхняя часть -->
+                <div class="lawn" style="position: absolute; top: 0; left: 0; width: 550px; height: 225px; z-index: 1;">
+                    <div class="label" style="top: -20px; right: 50%;">11м</div>
+                    <div class="label" style="top: 20%; right: 0;">4.5м</div>
+                </div>
+
+                <!-- Зона мангала (1×2 м = 50×100 px) - правый верхний угол верхней части газона -->
+                <div class="barbecue-zone" style="top: 0; left: 500px; width: 50px; height: 100px; z-index: 3;">
+                    <div class="label" style="top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 8px;">Мангал</div>
+                </div>
+
+                <!-- Газон - нижняя часть (7x5 м = 350x250 px) -->
+                <div class="lawn" style="position: absolute; top: 225px; left: 0; width: 250px; height: 350px;">
+                    <div class="label" style="top: 50%; right: 0;">7м</div>
+                    <div class="label" style="bottom: 0; right: 50%;">5м</div>
+                </div>
+
+                <!-- МАГИСТРАЛЬ (под землей, глубина 30см) -->
+                <!-- Влево вдоль верхней части газона от распределительной коробки -->
+                <div class="pipeline" style="width: 270px; height: 10px; top: 110px; left: 540px;"></div>
+
+                <!-- Распределительная коробка с клапанами (в конце магистрали) -->
+                <div class="distribution-box" style="width: 25px; height: 18.5px; top: 105px; left: 525px; z-index: 5;">
+                    <div class="label" style="top: -15px; left: 50%; transform: translateX(-50%); font-size: 6px;">РАСП.КОР.</div>
+                </div>
+
+                <!-- Труба к дождевателю №1: влево в газон, затем вниз и влево -->
+                <div class="pipe-to-sprinkler" style="width: 25px; height: 3px; top: 112px; left: 525px;"></div>
+                <div class="pipe-to-sprinkler" style="width: 3px; height: 100px; top: 112px; left: 525px;"></div>
+                <div class="pipe-to-sprinkler" style="width: 200px; height: 3px; top: 212px; left: 325px;"></div>
+
+                <!-- Труба к дождевателю №2: влево в газон, затем вниз и влево -->
+                <div class="pipe-to-sprinkler" style="width: 25px; height: 3px; top: 112px; left: 525px;"></div>
+                <div class="pipe-to-sprinkler" style="width: 3px; height: 100px; top: 112px; left: 525px;"></div>
+                <div class="pipe-to-sprinkler" style="width: 285px; height: 3px; top: 212px; left: 240px;"></div>
+
+                <!-- Труба к дождевателю №3: влево в газон, затем вниз в пределах ширины нижней части -->
+                <div class="pipe-to-sprinkler" style="width: 25px; height: 3px; top: 112px; left: 525px;"></div>
+                <div class="pipe-to-sprinkler" style="width: 3px; height: 113px; top: 112px; left: 525px;"></div>
+                <div class="pipe-to-sprinkler" style="width: 280px; height: 3px; top: 225px; left: 245px;"></div>
+                <div class="pipe-to-sprinkler" style="width: 3px; height: 335px; top: 225px; left: 245px;"></div>
+                <div class="pipe-to-sprinkler" style="width: 5px; height: 3px; top: 557px; left: 240px;"></div>
+
+                <!-- Дождеватель №1: Верхняя часть газона, нижняя грань -->
+                <div class="sprinkler" style="top: 215px; left: 325px; background: #8B0000; border-color: #5C0000;"></div>
+                <div class="sprinkler-label" style="top: 240px; left: 325px;">№1</div>
+                <div class="sprinkler-info" style="top: 230px; left: 375px; ">MP1000</div>
+                <div class="sprinkler-info" style="top: 260px; left: 375px; ">5.3 л/мин</div>
+                <div class="sprinkler-info" style="top: 290px; left: 375px; ">2.8 бар</div>
+                <div class="sprinkler-info" style="top: 320px; left: 375px; ">Бордовый</div>
+                <!-- Сектор полива дождевателя №1 (180 градусов, радиус 4.5м = 225px, диаметр 450px) -->
+                <div class="spray-sector-directed" style="top: 0px; left: 100px; width: 450px; height: 225px; border-radius: 225px 225px 0 0;"></div>
+
+                <!-- Дождеватель №2: Верхняя часть газона -->
+                <div class="sprinkler" style="top: 215px; left: 240px; background: #000000; border-color: #333333;"></div>
+                <div class="sprinkler-label" style="top: 250px; left: 240px;">№2</div>
+                <div class="sprinkler-info" style="top: 300px; left: 290px; ">MP2000</div>
+                <div class="sprinkler-info" style="top: 330px; left: 290px; ">3.4 л/мин</div>
+                <div class="sprinkler-info" style="top: 360px; left: 290px; ">2.8 бар</div>
+                <div class="sprinkler-info" style="top: 390px; left: 290px; ">Черный</div>
+                <!-- Сектор полива дождевателя №2 (90 градусов, 3 квадрант, радиус 5м = 250px, диаметр 500px) -->
+                <div class="spray-sector-directed" style="top: 225px; left: 0px; width: 250px; height: 250px; border-radius: 0 0 0 250px"></div>
+
+                <!-- Дождеватель №3: Правый нижний угол нижней части газона -->
+                <div class="sprinkler" style="top: 560px; left: 240px; background: #000000; border-color: #333333;"></div>
+                <div class="sprinkler-label" style="top: 595px; left: 240px;">№3</div>
+                <div class="sprinkler-info" style="top: 545px; left: 290px; ">MP2000</div>
+                <div class="sprinkler-info" style="top: 575px; left: 290px; ">3.53 л/мин</div>
+                <div class="sprinkler-info" style="top: 605px; left: 290px; ">2.8 бар</div>
+                <div class="sprinkler-info" style="top: 635px; left: 290px; ">Черный</div>
+                <!-- Сектор полива дождевателя №3 (90 градусов, третий квадрант, радиус 5.2м = 260px, диаметр 520px) -->
+                <div class="spray-sector-directed" style="top: 315px; left: -10px; width: 260px; height: 260px; border-radius: 260px 0 0 0;"></div>
+
+                <!-- ДРЕНАЖНЫЕ ЛИНИИ (от дождевателей к левому краю газона) -->
+                <!-- Дренажная линия от дождевателя №1 -->
+                <div class="drainage-line" style="width: 325px; height: 3px; top: 220px; left: 0;"></div>
+                <div class="drainage-well" style="width: 15px; height: 15px; top: 212px; left: 0;">
+                    <div class="drainage-valve" style="width: 8px; height: 8px; top: 3.5px; left: 3.5px;"></div>
+                </div>
+
+                <!-- Дренажная линия от дождевателя №2 -->
+                <div class="drainage-line" style="width: 240px; height: 3px; top: 220px; left: 0;"></div>
+                <div class="drainage-well" style="width: 15px; height: 15px; top: 212px; left: 0;">
+                    <div class="drainage-valve" style="width: 8px; height: 8px; top: 3.5px; left: 3.5px;"></div>
+                </div>
+
+                <!-- Дренажная линия от дождевателя №3 -->
+                <div class="drainage-line" style="width: 240px; height: 3px; top: 565px; left: 0;"></div>
+                <div class="drainage-well" style="width: 15px; height: 15px; top: 557px; left: 0;">
+                    <div class="drainage-valve" style="width: 8px; height: 8px; top: 3.5px; left: 3.5px;"></div>
+                </div>
+
+            </div>
+
+            <!-- Отдельный блок для грядок -->
+            <div class="plot" style="width: 120px; height: 675px; position: relative; margin-left: 20px;">
+                <!-- Масштаб: 1px = 0.02 м (50px = 1 м) -->
+
+                <!-- Грядка 1: 2×6 м = 100×300 px -->
+                <div class="garden-bed" style="position: absolute; top: 0; left: 10px; width: 100px; height: 300px;">
+                    <div class="label" style="top: -15px; left: 50%; transform: translateX(-50%);">Грядка 1<br>2×6м</div>
+                </div>
+
+                <!-- Грядка 2: 2×7.5 м = 100×375 px -->
+                <div class="garden-bed" style="position: absolute; top: 300px; left: 10px; width: 100px; height: 375px;">
+                    <div class="label" style="top: -15px; left: 50%; transform: translateX(-50%);">Грядка 2<br>2×7.5м</div>
+                </div>
+
+                <!-- Стрип-спринклер для грядки 1 (1 шт. на 25 см от левого края) -->
+                <div class="sprinkler" style="top: 150px; left: 22.5px; background: #4caf50; border-color: #388e3c;"></div>
+                <!-- Зона полива стрип-спринклера грядки 1 (полоса 1.5×6м = 75×300px, начиная от спринклера вправо) -->
+                <div class="spray-zone" style="top: 0; left: 22.5px; width: 75px; height: 300px; background: rgba(76, 175, 80, 0.2); border: 2px dashed rgba(76, 175, 80, 0.5);"></div>
+
+                <!-- Стрип-спринклер для грядки 2 (1 шт. на 25 см от левого края) -->
+                <div class="sprinkler" style="top: 487px; left: 22.5px; background: #4caf50; border-color: #388e3c;"></div>
+                <!-- Зона полива стрип-спринклера грядки 2 (полоса 1.5×7.5м = 75×375px, начиная от спринклера вправо) -->
+                <div class="spray-zone" style="top: 300px; left: 22.5px; width: 75px; height: 375px; background: rgba(76, 175, 80, 0.2); border: 2px dashed rgba(76, 175, 80, 0.5);"></div>
+
+            </div>
+        </div>
+
+        <div class="legend">
+            <h3>Обозначения:</h3>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #e8f5e9;"></div>
+                <span>Газон (требует полива)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #c8e6c9;"></div>
+                <span>Грядки (требуют полива)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #9e9e9e;"></div>
+                <span>Бетонная площадка под беседку (полив не требуется)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #d7ccc8; border: 2px solid #8d6e63;"></div>
+                <span>Зона мангала (полив не требуется)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ff5722; border-radius: 50%;"></div>
+                <span>Дождеватель газона (MP1000/MP2000)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #4caf50; border-radius: 50%;"></div>
+                <span>Стрип-спринклер грядок (Hunter SS-530)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: rgba(76, 175, 80, 0.2); border: 2px dashed rgba(76, 175, 80, 0.5);"></div>
+                <span>Зона полива стрип-спринклера</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #1976d2; border: 2px dashed #0d47a1;"></div>
+                <span>Магистраль (под землей, глубина 30см)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ff9800;"></div>
+                <span>Распределительная коробка с клапанами</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #795548;"></div>
+                <span>Дренажная линия (от дождевателей к колодцам)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #a1887f;"></div>
+                <span>Дренажный клапан</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #8d6e63; border-radius: 50%;"></div>
+                <span>Дренажный колодец</span>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Система автополива. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
