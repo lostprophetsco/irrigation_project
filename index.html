@@ -7,33 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <a href="index.html" class="logo">🌿 Автополив</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="irrigation_project.html">Проект</a></li>
-                <li><a href="equipment_connection_scheme.html">Схема подключения</a></li>
-                <li><a href="sprinkler_plan.html">План полива</a></li>
+    <nav class="nav">
+        <div class="nav__container container">
+            <a href="index.html" class="nav__logo">🌿 Автополив</a>
+            <ul class="nav__links">
+                <li><a href="index.html" class="nav__link">Главная</a></li>
+                <li><a href="irrigation_project.html" class="nav__link">Проект</a></li>
+                <li><a href="equipment_connection_scheme.html" class="nav__link">Схема подключения</a></li>
+                <li><a href="sprinkler_plan.html" class="nav__link">План полива</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="hero">
         <div class="container">
-            <h1>Система автоматического полива</h1>
-            <p>Проект irrigation system для газона и грядок</p>
+            <h1 class="hero__title">Система автоматического полива</h1>
+            <p class="hero__description">Проект irrigation system для газона и грядок</p>
         </div>
     </div>
 
     <div class="container">
         <div class="card">
-            <h2>📋 Обзор проекта</h2>
+            <h2 class="card__title">📋 Обзор проекта</h2>
             <p>Полноценная система автоматического полива для газона (74 кв.м) и грядок (27 кв.м) с использованием современного оборудования Hunter.</p>
         </div>
 
         <div class="card">
-            <h2>🌱 Основные характеристики</h2>
+            <h2 class="card__title">🌱 Основные характеристики</h2>
             <ul>
                 <li><strong>Площадь полива:</strong> 101 кв.м (74 кв.м газон + 27 кв.м грядки)</li>
                 <li><strong>Количество зон:</strong> 4 (3 для газона + 1 для грядок)</li>
@@ -46,7 +46,7 @@
         </div>
 
         <div class="card">
-            <h2>🔧 Оборудование</h2>
+            <h2 class="card__title">🔧 Оборудование</h2>
             <ul>
                 <li><strong>Контроллер:</strong> Hunter ELC-401i-E Eco-Logic</li>
                 <li><strong>Датчик влажности:</strong> Hunter SOIL-CLIK</li>
@@ -62,13 +62,13 @@
             <p>Полная техническая документация проекта:</p>
             <div style="margin-top: 1rem;">
                 <a href="irrigation_project.html" class="btn">📄 Проект</a>
-                <a href="equipment_connection_scheme.html" class="btn btn-outline" style="margin-left: 1rem;">🔌 Схема подключения</a>
-                <a href="sprinkler_plan.html" class="btn btn-outline" style="margin-left: 1rem;">🗺️ План полива</a>
+                <a href="equipment_connection_scheme.html" class="btn btn--outline" style="margin-left: 1rem;">🔌 Схема подключения</a>
+                <a href="sprinkler_plan.html" class="btn btn--outline" style="margin-left: 1rem;">🗺️ План полива</a>
             </div>
         </div>
 
         <div class="card">
-            <h2>💡 Особенности системы</h2>
+            <h2 class="card__title">💡 Особенности системы</h2>
             <ul>
                 <li><strong>Умный полив:</strong> Датчик влажности почвы блокирует полив при достаточной влажности</li>
                 <li><strong>Защита насоса:</strong> Поплавковый датчик предотвращает сухой ход</li>
@@ -79,9 +79,9 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>© 2024 Система автополива. Все права защищены.</p>
+            <p class="footer__text">© 2024 Система автополива. Все права защищены.</p>
         </div>
     </footer>
 </body>

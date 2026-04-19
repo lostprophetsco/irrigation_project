@@ -32,7 +32,7 @@ body {
 }
 
 /* Navigation */
-nav {
+.nav {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     padding: 1rem 0;
     box-shadow: var(--shadow);
@@ -41,26 +41,26 @@ nav {
     z-index: 1000;
 }
 
-nav .container {
+.nav__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav .logo {
+.nav__logo {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
 }
 
-nav .nav-links {
+.nav__links {
     display: flex;
     gap: 2rem;
     list-style: none;
 }
 
-nav .nav-links a {
+.nav__link {
     color: white;
     text-decoration: none;
     font-weight: 500;
@@ -69,7 +69,7 @@ nav .nav-links a {
     border-radius: 6px;
 }
 
-nav .nav-links a:hover {
+.nav__link:hover {
     background-color: rgba(255,255,255,0.2);
 }
 
@@ -82,12 +82,12 @@ nav .nav-links a:hover {
     margin-bottom: 2rem;
 }
 
-.hero h1 {
+.hero__title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
-.hero p {
+.hero__description {
     font-size: 1.2rem;
     opacity: 0.9;
 }
@@ -107,13 +107,13 @@ nav .nav-links a:hover {
     transform: translateY(-2px);
 }
 
-.card h2 {
+.card__title {
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 
-.card h3 {
+.card__subtitle {
     color: var(--text-dark);
     margin-bottom: 0.75rem;
     font-size: 1.2rem;
@@ -128,7 +128,7 @@ nav .nav-links a:hover {
     margin-bottom: 2rem;
 }
 
-.section h2 {
+.section__title {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
@@ -136,23 +136,23 @@ nav .nav-links a:hover {
     padding-bottom: 0.5rem;
 }
 
-.section h3 {
+.section__subtitle {
     color: var(--text-dark);
     margin-bottom: 1rem;
     font-size: 1.4rem;
 }
 
-.section p {
+.section__text {
     color: var(--text-light);
     margin-bottom: 1rem;
 }
 
-.section ul, .section ol {
+.section__list {
     margin-left: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.section li {
+.section__list-item {
     color: var(--text-light);
     margin-bottom: 0.5rem;
 }
@@ -165,19 +165,19 @@ nav .nav-links a:hover {
     margin: 1.5rem 0;
 }
 
-.specs ul {
+.specs__list {
     list-style: none;
     margin-left: 0;
 }
 
-.specs li {
+.specs__list-item {
     color: var(--text-dark);
     margin-bottom: 0.75rem;
     padding-left: 1rem;
     border-left: 3px solid var(--accent-color);
 }
 
-.specs li strong {
+.specs__list-item--highlight {
     color: var(--primary-color);
 }
 
@@ -190,12 +190,12 @@ nav .nav-links a:hover {
     border-radius: 4px;
 }
 
-.important h4 {
+.important__title {
     color: #856404;
     margin-bottom: 0.5rem;
 }
 
-.important p {
+.important__text {
     color: #856404;
     margin: 0;
 }
@@ -206,7 +206,7 @@ nav .nav-links a:hover {
     margin: 1.5rem 0;
 }
 
-table {
+.table {
     width: 100%;
     border-collapse: collapse;
     background: var(--bg-white);
@@ -215,20 +215,20 @@ table {
     box-shadow: var(--shadow);
 }
 
-table th,
-table td {
+.table__header,
+.table__cell {
     padding: 1rem;
     text-align: left;
     border-bottom: 1px solid #e0e0e0;
 }
 
-table th {
+.table__header {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
     font-weight: 600;
 }
 
-table tr:hover {
+.table__row:hover {
     background-color: #f5f5f5;
 }
 
@@ -251,19 +251,19 @@ table tr:hover {
     transform: translateY(-2px);
 }
 
-.btn-outline {
+.btn--outline {
     background: transparent;
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
 }
 
-.btn-outline:hover {
+.btn--outline:hover {
     background: var(--primary-color);
     color: white;
 }
 
 /* Footer */
-footer {
+.footer {
     background: var(--text-dark);
     color: white;
     padding: 2rem 0;
@@ -271,27 +271,28 @@ footer {
     text-align: center;
 }
 
-footer p {
+.footer__text {
     opacity: 0.8;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    nav .nav-links {
+    .nav__links {
         flex-direction: column;
         gap: 0.5rem;
     }
     
-    nav .container {
+    .nav__container {
         flex-direction: column;
         gap: 1rem;
     }
     
-    .hero h1 {
+    .hero__title {
         font-size: 2rem;
     }
     
-    .hero p {
+    .hero__description {
         font-size: 1rem;
     }
 }
+

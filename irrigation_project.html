@@ -7,27 +7,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <a href="index.html" class="logo">🌿 Автополив</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="irrigation_project.html">Проект</a></li>
-                <li><a href="equipment_connection_scheme.html">Схема подключения</a></li>
-                <li><a href="sprinkler_plan.html">План полива</a></li>
+    <nav class="nav">
+        <div class="nav__container container">
+            <a href="index.html" class="nav__logo">🌿 Автополив</a>
+            <ul class="nav__links">
+                <li><a href="index.html" class="nav__link">Главная</a></li>
+                <li><a href="irrigation_project.html" class="nav__link">Проект</a></li>
+                <li><a href="equipment_connection_scheme.html" class="nav__link">Схема подключения</a></li>
+                <li><a href="sprinkler_plan.html" class="nav__link">План полива</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="hero">
         <div class="container">
-            <h1>Проект автополива газона</h1>
+            <h1 class="hero__title">Проект автополива газона</h1>
         </div>
     </div>
 
     <div class="container">
         <div class="section">
-            <h2>Основные параметры</h2>
+            <h2 class="section__title">Основные параметры</h2>
             <p><strong>Площадь:</strong> 84.5 кв.м.</p>
             <p><strong>Площадь полива (без беседки):</strong> 74 кв.м. газон + 27 кв.м. грядки = 101 кв.м.</p>
             <p><strong>Форма участка:</strong> Г-образная</p>
@@ -42,7 +42,7 @@
         </div>
 
         <div class="section">
-            <h2>Источник воды</h2>
+            <h2 class="section__title">Источник воды</h2>
             <ul>
                 <li><strong>Тип:</strong> Бак 500-750 литров</li>
                 <li><strong>Пополнение:</strong> Из водопровода</li>
@@ -51,7 +51,7 @@
         </div>
 
         <div class="section">
-            <h2>Растения и почва</h2>
+            <h2 class="section__title">Растения и почва</h2>
             <ul>
                 <li><strong>Тип растений:</strong> Газон, трава</li>
                 <li><strong>Тип почвы:</strong> Чернозем (хорошая водоудерживающая способность)</li>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="section">
-            <h2>Оборудование</h2>
+            <h2 class="section__title">Оборудование</h2>
             <ul>
                 <li><strong>Контроллер:</strong> Hunter ELC-401i-E Eco-Logic (4 станции, 2 программы, 4 времени запуска на программу)</li>
                 <li><strong>Настройка:</strong> Программа A - запуск в 21:00, Программа B - запуск в 07:00 (с блокировкой по датчику влажности)</li>
@@ -72,7 +72,7 @@
             
             <div class="specs">
                 <h3>Спецификация:</h3>
-                <ul>
+                <ul class="specs__list">
                     <li><strong>Тип:</strong> Внутренний контроллер (indoor)</li>
                     <li><strong>Количество станций:</strong> 4 (используется 3 для газона + 1 для другой грядки)</li>
                     <li><strong>Количество программ:</strong> 2 независимые программы</li>
@@ -107,7 +107,7 @@
             
             <div class="specs">
                 <h3>Спецификация:</h3>
-                <ul>
+                <ul class="specs__list">
                     <li><strong>Тип:</strong> Емкостный датчик влажности</li>
                     <li><strong>Диапазон измерения влажности:</strong> 0-100% (относительная влажность)</li>
                     <li><strong>Напряжение питания:</strong> 24 ВАС (от контроллера)</li>
@@ -147,7 +147,7 @@
             
             <div class="specs">
                 <h3>Размеры:</h3>
-                <ul>
+                <ul class="specs__list">
                     <li><strong>Длина (низ):</strong> 50.5 см</li>
                     <li><strong>Ширина (низ):</strong> 37 см</li>
                     <li><strong>Высота:</strong> 30.5 см</li>
@@ -166,7 +166,7 @@
             
             <div class="specs">
                 <h3>Спецификация:</h3>
-                <ul>
+                <ul class="specs__list">
                     <li><strong>Тип:</strong> Поплавковый выключатель (float switch)</li>
                     <li><strong>Напряжение:</strong> 230VAC (для разрыва цепи питания насоса)</li>
                     <li><strong>Ток:</strong> До 10A (достаточно для насоса 0.5-0.75 кВт)</li>
@@ -200,7 +200,7 @@
         </div>
 
         <div class="section">
-            <h2>Дождеватели (форсунки) - актуальная конфигурация</h2>
+            <h2 class="section__title">Дождеватели (форсунки) - актуальная конфигурация</h2>
 
             <h3>Зона газона (3 дождевателя работают одновременно)</h3>
 
@@ -211,7 +211,7 @@
 
             <div class="specs">
                 <h3>Спецификация форсунки:</h3>
-                <ul>
+                <ul class="specs__list">
                     <li><strong>Тип:</strong> Ротационная форсунка (MP1000)</li>
                     <li><strong>Радиус полива:</strong> 2.4м - 4.6м (8' - 15')</li>
                     <li><strong>Регулируемый сектор:</strong> 90° - 210°</li>
@@ -236,7 +236,7 @@
 
             <div class="specs">
                 <h3>Спецификация форсунки:</h3>
-                <ul>
+                <ul class="specs__list">
                     <li><strong>Тип:</strong> Ротационная форсунка (MP2000)</li>
                     <li><strong>Радиус полива:</strong> 4м - 6.4м (13' - 21')</li>
                     <li><strong>Регулируемый сектор:</strong> 90° - 210°</li>
@@ -261,7 +261,7 @@
 
             <div class="specs">
                 <h3>Спецификация форсунки:</h3>
-                <ul>
+                <ul class="specs__list">
                     <li><strong>Тип:</strong> Ротационная форсунка (MP2000)</li>
                     <li><strong>Радиус полива:</strong> 4м - 6.4м (13' - 21')</li>
                     <li><strong>Регулируемый сектор:</strong> 90° - 210°</li>
@@ -280,9 +280,9 @@
             </ul>
 
             <div class="important">
-                <h4>Итого по газону:</h4>
-                <p>Общий расход при одновременной работе всех дождевателей газона: 12.23 л/мин (734 л/час)</p>
-                <p>Общая площадь полива газона: ~72.6 м² (с учетом перекрытия секторов)</p>
+                <h4 class="important__title">Итого по газону:</h4>
+                <p class="important__text">Общий расход при одновременной работе всех дождевателей газона: 12.23 л/мин (734 л/час)</p>
+                <p class="important__text">Общая площадь полива газона: ~72.6 м² (с учетом перекрытия секторов)</p>
             </div>
 
             <h3>Зона грядок (стрип-спринклеры)</h3>
@@ -303,7 +303,7 @@
 
             <div class="specs">
                 <h3>Спецификация форсунки:</h3>
-                <ul>
+                <ul class="specs__list">
                     <li><strong>Тип:</strong> Стрип-форсунка (Strip Pattern Nozzle)</li>
                     <li><strong>Паттерн:</strong> Side Strip (боковая полоса)</li>
                     <li><strong>Размеры полосы:</strong> 5' × 30' (1.5м × 9м)</li>
@@ -324,16 +324,16 @@
             </ul>
 
             <div class="important">
-                <h4>Итого по всей системе (одновременная работа):</h4>
-                <p>Газон: 12.23 л/мин</p>
-                <p>Грядки: 9.8 л/мин</p>
-                <p><strong>Общий расход: 22.03 л/мин (1322 л/час)</strong></p>
-                <p>Общая площадь полива: 101 м² (74 м² газон + 27 м² грядки)</p>
+                <h4 class="important__title">Итого по всей системе (одновременная работа):</h4>
+                <p class="important__text">Газон: 12.23 л/мин</p>
+                <p class="important__text">Грядки: 9.8 л/мин</p>
+                <p class="important__text"><strong>Общий расход: 22.03 л/мин (1322 л/час)</strong></p>
+                <p class="important__text">Общая площадь полива: 101 м² (74 м² газон + 27 м² грядки)</p>
             </div>
         </div>
 
         <div class="section">
-            <h2>Предварительные оценки</h2>
+            <h2 class="section__title">Предварительные оценки</h2>
             <ul>
                 <li><strong>Количество дождевателей газона:</strong> 3 шт. (MP1000 ×1, MP2000 ×2)</li>
                 <li><strong>Количество стрип-спринклеров грядок:</strong> 2 шт. (Hunter SS-530)</li>
@@ -344,7 +344,7 @@
         </div>
 
         <div class="section">
-            <h2>Размеры участка</h2>
+            <h2 class="section__title">Размеры участка</h2>
             <p><strong>Площадь газона:</strong> 84.5 кв.м.</p>
             <p><strong>Площадь полива (без беседки):</strong> 101 кв.м. (74 кв.м. газон + 27 кв.м. грядки)</p>
             <ul>
@@ -360,7 +360,7 @@
         <hr>
 
         <div class="section">
-            <h2>Размеры дома и террасы</h2>
+            <h2 class="section__title">Размеры дома и террасы</h2>
             <ul>
                 <li>Дом: 10 м (ширина) × 12 м (длина)</li>
                 <li>Терраса: 4 м (длина) × 3 м (ширина)</li>
@@ -371,14 +371,14 @@
         <hr>
 
         <div class="section">
-            <h2>Требуется уточнение по чертежу</h2>
+            <h2 class="section__title">Требуется уточнение по чертежу</h2>
             <ul>
                 <li>Длина трубопровода от бака до дальних форсунок (для точного расчета потерь давления)</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>Расчеты системы полива</h2>
+            <h2 class="section__title">Расчеты системы полива</h2>
 
             <h3>Количество и расположение форсунок</h3>
             <p><strong>Рекомендуемое количество:</strong> 4-5 форсунок (для площади 84.5 кв.м.)</p>
@@ -403,7 +403,7 @@
             
             <div class="specs">
                 <h3>Расчет:</h3>
-                <ul>
+                <ul class="specs__list">
                     <li>Фактический расход: 12.23 л/мин (5.3 + 3.4 + 3.53)</li>
                     <li>Требуемое давление на дождевателях: 2.8 бар</li>
                     <li>Потери давления в трубах: ~0.2-0.5 бар (зависит от длины магистрали)</li>
@@ -474,7 +474,7 @@
         </div>
 
         <div class="section">
-            <h2>Расчеты (к выполнению)</h2>
+            <h2 class="section__title">Расчеты (к выполнению)</h2>
             <ul class="checklist">
                 <li>Мощность насоса</li>
                 <li>Тип и количество форсунок для газона</li>
@@ -492,7 +492,7 @@
         <hr>
 
         <div class="section">
-            <h2>Руководство по эксплуатации системы полива</h2>
+            <h2 class="section__title">Руководство по эксплуатации системы полива</h2>
 
             <h3>Общий принцип работы</h3>
             <p>Система полива работает по следующей схеме:</p>
@@ -641,9 +641,9 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>© 2024 Система автополива. Все права защищены.</p>
+            <p class="footer__text">© 2024 Система автополива. Все права защищены.</p>
         </div>
     </footer>
 </body>
