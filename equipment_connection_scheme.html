@@ -27,52 +27,52 @@
 
     <div class="container">
         <div class="legend">
-            <div class="legend-item">
-                <div class="legend-color bak"></div>
+            <div class="legend__item">
+                <div class="legend__color legend__color--bak"></div>
                 <span>Бак</span>
             </div>
-            <div class="legend-item">
-                <div class="legend-color filter"></div>
+            <div class="legend__item">
+                <div class="legend__color legend__color--filter"></div>
                 <span>Фильтр</span>
             </div>
-            <div class="legend-item">
-                <div class="legend-color pump"></div>
+            <div class="legend__item">
+                <div class="legend__color legend__color--pump"></div>
                 <span>Насос</span>
             </div>
-            <div class="legend-item">
-                <div class="legend-color check-valve"></div>
+            <div class="legend__item">
+                <div class="legend__color legend__color--check-valve"></div>
                 <span>Обратный клапан</span>
             </div>
-            <div class="legend-item">
-                <div class="legend-color pressure-switch"></div>
+            <div class="legend__item">
+                <div class="legend__color legend__color--pressure-switch"></div>
                 <span>Реле давления</span>
             </div>
-            <div class="legend-item">
-                <div class="legend-color manometer"></div>
+            <div class="legend__item">
+                <div class="legend__color legend__color--manometer"></div>
                 <span>Манометр</span>
             </div>
-            <div class="legend-item">
-                <div class="legend-color magistral"></div>
+            <div class="legend__item">
+                <div class="legend__color legend__color--magistral"></div>
                 <span>Магистраль</span>
             </div>
-            <div class="legend-item">
-                <div class="legend-color distribution"></div>
+            <div class="legend__item">
+                <div class="legend__color legend__color--distribution"></div>
                 <span>Распределительная коробка</span>
             </div>
-            <div class="legend-item">
-                <div class="legend-color valves"></div>
+            <div class="legend__item">
+                <div class="legend__color legend__color--valves"></div>
                 <span>Клапаны</span>
             </div>
-            <div class="legend-item">
-                <div class="legend-color sprinklers"></div>
+            <div class="legend__item">
+                <div class="legend__color legend__color--sprinklers"></div>
                 <span>Форсунки</span>
             </div>
-            <div class="legend-item">
-                <div class="legend-color" style="background: linear-gradient(135deg, #fddb92 0%, #d1fdff 100%);"></div>
+            <div class="legend__item">
+                <div class="legend__color" style="background: linear-gradient(135deg, #fddb92 0%, #d1fdff 100%);"></div>
                 <span>Датчик влажности почвы</span>
             </div>
-            <div class="legend-item">
-                <div class="legend-color" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
+            <div class="legend__item">
+                <div class="legend__color" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);"></div>
                 <span>Поплавковый датчик уровня</span>
             </div>
         </div>
@@ -80,35 +80,35 @@
         <h2>Общая схема</h2>
 
         <div class="scheme">
-            <div class="component" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">Водопровод</div>
-            <div class="arrow">↓</div>
-            <div class="component filter">Фильтр грубой очистки (для входящей воды)</div>
-            <div class="arrow">↓</div>
-            <div class="component bak">
+            <div class="scheme__component">Водопровод</div>
+            <div class="scheme__arrow">↓</div>
+            <div class="scheme__component scheme__component--filter">Фильтр грубой очистки (для входящей воды)</div>
+            <div class="scheme__arrow">↓</div>
+            <div class="scheme__component scheme__component--bak">
                 <strong>Бак 500-750 л</strong><br>
                 <small>• Поплавковый клапан (поддержание уровня)</small><br>
                 <small>• Поплавковый датчик уровня (защита от сухого хода)</small>
             </div>
-            <div class="arrow">↓</div>
-            <div class="component filter">Фильтр грубой очистки (перед насосом, 100-200 мкм)</div>
-            <div class="arrow">↓</div>
-            <div class="component pump">Насос поверхностный с самовсасыванием</div>
-            <div class="arrow">↓</div>
-            <div class="component check-valve">Обратный клапан</div>
-            <div class="arrow">↓</div>
-            <div class="component" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">Фильтр тонкой очистки (в главной магистрали, 50-80 мкм)</div>
-            <div class="arrow">↓</div>
-            <div class="component pressure-switch">Реле давления</div>
-            <div class="arrow">↓</div>
-            <div class="component manometer">Манометр</div>
-            <div class="arrow">↓</div>
-            <div class="component magistral">Магистраль (40 мм ПНД)</div>
-            <div class="arrow">↓</div>
-            <div class="component distribution">Распределительная коробка</div>
-            <div class="arrow">↓</div>
-            <div class="component valves">Клапаны (4 шт. - 3 для газона, 1 для грядок)</div>
-            <div class="arrow">↓</div>
-            <div class="component sprinklers">Форсунки газона (3 шт.) + Стрип-спринклеры грядок (2 шт.)</div>
+            <div class="scheme__arrow">↓</div>
+            <div class="scheme__component scheme__component--filter">Фильтр грубой очистки (перед насосом, 100-200 мкм)</div>
+            <div class="scheme__arrow">↓</div>
+            <div class="scheme__component scheme__component--pump">Насос поверхностный с самовсасыванием</div>
+            <div class="scheme__arrow">↓</div>
+            <div class="scheme__component scheme__component--check-valve">Обратный клапан</div>
+            <div class="scheme__arrow">↓</div>
+            <div class="scheme__component" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">Фильтр тонкой очистки (в главной магистрали, 50-80 мкм)</div>
+            <div class="scheme__arrow">↓</div>
+            <div class="scheme__component scheme__component--pressure-switch">Реле давления</div>
+            <div class="scheme__arrow">↓</div>
+            <div class="scheme__component scheme__component--manometer">Манометр</div>
+            <div class="scheme__arrow">↓</div>
+            <div class="scheme__component scheme__component--magistral">Магистраль (40 мм ПНД)</div>
+            <div class="scheme__arrow">↓</div>
+            <div class="scheme__component scheme__component--distribution">Распределительная коробка</div>
+            <div class="scheme__arrow">↓</div>
+            <div class="scheme__component scheme__component--valves">Клапаны (4 шт. - 3 для газона, 1 для грядок)</div>
+            <div class="scheme__arrow">↓</div>
+            <div class="scheme__component scheme__component--sprinklers">Форсунки газона (3 шт.) + Стрип-спринклеры грядок (2 шт.)</div>
         </div>
 
         <h2>Характеристики компонентов</h2>
