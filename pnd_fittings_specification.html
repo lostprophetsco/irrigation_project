@@ -4,195 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Спецификация ПНД фитингов и переходников</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        h2 {
-            color: #555;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
-        }
-
-        h3 {
-            color: #666;
-            margin-top: 20px;
-            margin-bottom: 15px;
-        }
-
-        .table-container {
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        table th,
-        table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-
-        table th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        table tr:hover {
-            background-color: #e6f7ff;
-        }
-
-        .section {
-            margin: 30px 0;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-        }
-
-        .note {
-            background-color: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        .note h4 {
-            color: #856404;
-            margin-bottom: 10px;
-        }
-
-        .note p {
-            color: #856404;
-            margin: 5px 0;
-        }
-
-        .warning {
-            background-color: #f8d7da;
-            border-left: 4px solid #f5c6cb;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        .warning h4 {
-            color: #721c24;
-            margin-bottom: 10px;
-        }
-
-        .warning p {
-            color: #721c24;
-            margin: 5px 0;
-        }
-
-        .total {
-            background-color: #d4edda;
-            border-left: 4px solid #28a745;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        .total h4 {
-            color: #155724;
-            margin-bottom: 10px;
-        }
-
-        .total p {
-            color: #155724;
-            margin: 5px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Спецификация ПНД фитингов и переходников</h1>
+    <nav class="nav">
+        <div class="nav__container container">
+            <a href="index.html" class="nav__logo">🌿 Автополив</a>
+            <ul class="nav__links">
+                <li><a href="index.html" class="nav__link">Главная</a></li>
+                <li><a href="irrigation_project.html" class="nav__link">Проект</a></li>
+                <li><a href="equipment_connection_scheme.html" class="nav__link">Схема</a></li>
+                <li><a href="sprinkler_plan.html" class="nav__link">План</a></li>
+                <li><a href="pump_box_design.html" class="nav__link">Ящик</a></li>
+                <li><a href="pnd_fittings_specification.html" class="nav__link">Фитинги</a></li>
+                <li><a href="estimate.html" class="nav__link">Смета</a></li>
+                <li><a href="estimate_ai.html" class="nav__link">Смета (ИИ)</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <div class="note">
+    <div class="container">
+        <h1 class="section__title">Спецификация ПНД фитингов и переходников</h1>
+
+        <div class="fittings-spec__note">
             <h4>📝 Общая информация</h4>
             <p>Вся система собирается на ПНД трубах и фитингах. Для соединения с металлическими компонентами (насос, фильтры, клапаны) используются переходники МПН (металл-полиэтилен).</p>
         </div>
 
-        <h2>1. Подземная часть системы</h2>
+        <div class="fittings-spec">
+            <h2>Схема прямых соединений оборудования (до магистрали)</h2>
 
-        <div class="section">
-            <h3>1.1. Магистраль (40 мм ПНД)</h3>
+            <div class="section">
+                <h3>От водопровода к баку (1 дюйм)</h3>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr class="table__row">
+                                <th class="table__header">От</th>
+                                <th class="table__header">Фитинг</th>
+                                <th class="table__header">К</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__row">
+                                <td>Водопровод (3/4")</td>
+                                <td>Кран шаровой 3/4"</td>
+                                <td>Фильтр грубой очистки (3/4")</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Фильтр грубой очистки (выход 3/4")</td>
+                                <td>МПН 3/4" (25 мм)</td>
+                                <td>Бак</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>От бака к насосу (1 дюйм)</h3>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr class="table__row">
+                                <th class="table__header">От</th>
+                                <th class="table__header">Фитинг</th>
+                                <th class="table__header">К</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__row">
+                                <td>Бак</td>
+                                <td>МПН 1" (25 мм)</td>
+                                <td>Фильтр грубой очистки (вход)</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Фильтр грубой очистки (выход)</td>
+                                <td>МПН 1" (25 мм)</td>
+                                <td>Насос</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>От насоса к магистрали (40 мм)</h3>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr class="table__row">
+                                <th class="table__header">От</th>
+                                <th class="table__header">Фитинг</th>
+                                <th class="table__header">К</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__row">
+                                <td>Насос (вход/выход 1")</td>
+                                <td>МПН 1" (40 мм)</td>
+                                <td>Обратный клапан (вход)</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Обратный клапан (выход)</td>
+                                <td>МПН 1" (40 мм)</td>
+                                <td>Фильтр тонкой очистки (вход)</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Фильтр тонкой очистки (выход)</td>
+                                <td>МПН 1" (40 мм) → Ниппель латунный 1/4"</td>
+                                <td>Реле давления</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Реле давления</td>
+                                <td>Ниппель латунный 1/4"</td>
+                                <td>Манометр</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td>Манометр</td>
+                                <td>МПН 1" (40 мм)</td>
+                                <td>Магистраль (40 мм ПНД)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="fittings-spec">
+            <h2>1. Подземная часть системы</h2>
+
+            <div class="section">
+                <h3>1.1. Магистраль (40 мм ПНД)</h3>
             <div class="table-container">
-                <table>
+                <table class="table">
                     <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Тип фитинга</th>
-                            <th>Диаметр</th>
-                            <th>Количество</th>
-                            <th>Назначение</th>
+                        <tr class="table__row">
+                            <th class="table__header">Наименование</th>
+                            <th class="table__header">Тип фитинга</th>
+                            <th class="table__header">Диаметр</th>
+                            <th class="table__header">Количество</th>
+                            <th class="table__header">Назначение</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table__row">
                             <td>Тройник ПНД компрессионный</td>
                             <td>Компрессионный</td>
                             <td>40 мм × 40 мм × 40 мм</td>
                             <td>1 шт.</td>
                             <td>Разветвление на распределительную коробку</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Муфта ПНД компрессионная</td>
                             <td>Компрессионная</td>
                             <td>40 мм</td>
                             <td>2 шт.</td>
                             <td>Соединение участков магистрали</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Заглушка ПНД компрессионная</td>
                             <td>Компрессионная</td>
                             <td>40 мм</td>
                             <td>1 шт.</td>
                             <td>Концевая заглушка магистрали</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Колено ПНД компрессионное 90°</td>
                             <td>Компрессионное</td>
                             <td>40 мм</td>
                             <td>2-4 шт.</td>
                             <td>Повороты магистрали (по необходимости)</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Переходник МПН 1" наружная</td>
                             <td>МПН (металл-ПНД)</td>
                             <td>40 мм (1.5") → 1"</td>
@@ -207,46 +191,46 @@
         <div class="section">
             <h3>1.2. Разводка к клапанам (25 мм ПНД)</h3>
             <div class="table-container">
-                <table>
+                <table class="table">
                     <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Тип фитинга</th>
-                            <th>Диаметр</th>
-                            <th>Количество</th>
-                            <th>Назначение</th>
+                        <tr class="table__row">
+                            <th class="table__header">Наименование</th>
+                            <th class="table__header">Тип фитинга</th>
+                            <th class="table__header">Диаметр</th>
+                            <th class="table__header">Количество</th>
+                            <th class="table__header">Назначение</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table__row">
                             <td>Тройник ПНД компрессионный</td>
                             <td>Компрессионный</td>
                             <td>40 мм × 25 мм × 25 мм</td>
                             <td>1 шт.</td>
                             <td>Переход с магистрали на разводку</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Тройник ПНД компрессионный</td>
                             <td>Компрессионный</td>
                             <td>25 мм × 25 мм × 25 мм</td>
                             <td>1 шт.</td>
                             <td>Разветвление на клапаны</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Муфта ПНД компрессионная</td>
                             <td>Компрессионная</td>
                             <td>25 мм</td>
                             <td>5 шт.</td>
                             <td>Соединение участков разводки</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Колено ПНД компрессионное 90°</td>
                             <td>Компрессионное</td>
                             <td>25 мм</td>
                             <td>5 шт.</td>
                             <td>Повороты к клапанам</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Переходник МПН 3/4" наружная</td>
                             <td>МПН (металл-ПНД)</td>
                             <td>25 мм (1") → 3/4"</td>
@@ -261,39 +245,39 @@
         <div class="section">
             <h3>1.3. Соединения к форсункам (20 мм ПНД)</h3>
             <div class="table-container">
-                <table>
+                <table class="table">
                     <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Тип фитинга</th>
-                            <th>Диаметр</th>
-                            <th>Количество</th>
-                            <th>Назначение</th>
+                        <tr class="table__row">
+                            <th class="table__header">Наименование</th>
+                            <th class="table__header">Тип фитинга</th>
+                            <th class="table__header">Диаметр</th>
+                            <th class="table__header">Количество</th>
+                            <th class="table__header">Назначение</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table__row">
                             <td>Тройник ПНД компрессионный</td>
                             <td>Компрессионный</td>
                             <td>25 мм × 20 мм × 20 мм</td>
                             <td>3 шт.</td>
                             <td>Переход к форсункам</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Муфта ПНД компрессионная</td>
                             <td>Компрессионная</td>
                             <td>20 мм</td>
                             <td>3 шт.</td>
                             <td>Соединение к форсункам</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Колено ПНД компрессионное 90°</td>
                             <td>Компрессионное</td>
                             <td>20 мм</td>
                             <td>3 шт.</td>
                             <td>Вывод к форсункам</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Переходник МПН 1/2" наружная</td>
                             <td>МПН (металл-ПНД)</td>
                             <td>20 мм (3/4") → 1/2"</td>
@@ -308,46 +292,46 @@
         <div class="section">
             <h3>1.4. Дренажные линии (20 мм ПНД)</h3>
             <div class="table-container">
-                <table>
+                <table class="table">
                     <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Тип фитинга</th>
-                            <th>Диаметр</th>
-                            <th>Количество</th>
-                            <th>Назначение</th>
+                        <tr class="table__row">
+                            <th class="table__header">Наименование</th>
+                            <th class="table__header">Тип фитинга</th>
+                            <th class="table__header">Диаметр</th>
+                            <th class="table__header">Количество</th>
+                            <th class="table__header">Назначение</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table__row">
                             <td>Тройник ПНД компрессионный</td>
                             <td>Компрессионный</td>
                             <td>20 мм × 20 мм × 20 мм</td>
                             <td>3 шт.</td>
                             <td>Подключение дренажных линий к дождевателям</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Муфта ПНД компрессионная</td>
                             <td>Компрессионная</td>
                             <td>20 мм</td>
                             <td>3 шт.</td>
                             <td>Соединение участков дренажных линий</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Колено ПНД компрессионное 90°</td>
                             <td>Компрессионное</td>
                             <td>20 мм</td>
                             <td>3 шт.</td>
                             <td>Повороты к дренажным колодцам</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Дренажный клапан</td>
                             <td>Шаровой</td>
                             <td>20 мм (3/4")</td>
                             <td>3 шт.</td>
                             <td>Открытие/закрытие дренажа в колодцах</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Дренажный колодец</td>
                             <td>Пластиковый (минимальный)</td>
                             <td>160 мм (диаметр) × 600 мм (глубина)</td>
@@ -362,39 +346,32 @@
         <h2>2. Надземная часть (соединение оборудования)</h2>
 
         <div class="section">
-            <h3>2.1. Соединение фильтра для входящей воды</h3>
+            <h3>2.1. Соединение фильтра для входящей воды (1 дюйм)</h3>
             <div class="table-container">
-                <table>
+                <table class="table">
                     <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Тип фитинга</th>
-                            <th>Диаметр</th>
-                            <th>Количество</th>
-                            <th>Назначение</th>
+                        <tr class="table__row">
+                            <th class="table__header">Наименование</th>
+                            <th class="table__header">Тип фитинга</th>
+                            <th class="table__header">Диаметр</th>
+                            <th class="table__header">Количество</th>
+                            <th class="table__header">Назначение</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table__row">
+                            <td>Кран шаровой 3/4"</td>
+                            <td>Шаровой</td>
+                            <td>3/4"</td>
+                            <td>1 шт.</td>
+                            <td>Отключение системы от водопровода</td>
+                        </tr>
+                        <tr class="table__row">
                             <td>Переходник МПН 3/4" наружная</td>
                             <td>МПН (металл-ПНД)</td>
-                            <td>25 мм (1") → 3/4"</td>
-                            <td>2 шт.</td>
-                            <td>Подключение фильтра к водопроводу и баку</td>
-                        </tr>
-                        <tr>
-                            <td>Ниппель латунный 3/4"</td>
-                            <td>Латунный</td>
-                            <td>3/4"</td>
-                            <td>2 шт.</td>
-                            <td>Соединение с фильтром</td>
-                        </tr>
-                        <tr>
-                            <td>Американка 3/4"</td>
-                            <td>Латунная</td>
-                            <td>3/4"</td>
-                            <td>2 шт.</td>
-                            <td>Быстрое разъединение фильтра</td>
+                            <td>3/4" → 25 мм</td>
+                            <td>1 шт.</td>
+                            <td>Подключение фильтра к ПНД 25 мм</td>
                         </tr>
                     </tbody>
                 </table>
@@ -402,206 +379,91 @@
         </div>
 
         <div class="section">
-            <h3>2.2. Соединение фильтра перед насосом</h3>
+            <h3>2.2. Соединение фильтра перед насосом (1 дюйм)</h3>
             <div class="table-container">
-                <table>
+                <table class="table">
                     <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Тип фитинга</th>
-                            <th>Диаметр</th>
-                            <th>Количество</th>
-                            <th>Назначение</th>
+                        <tr class="table__row">
+                            <th class="table__header">Наименование</th>
+                            <th class="table__header">Тип фитинга</th>
+                            <th class="table__header">Диаметр</th>
+                            <th class="table__header">Количество</th>
+                            <th class="table__header">Назначение</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table__row">
                             <td>Переходник МПН 1" наружная</td>
                             <td>МПН (металл-ПНД)</td>
-                            <td>40 мм (1.5") → 1"</td>
+                            <td>1" → 25 мм</td>
                             <td>2 шт.</td>
                             <td>Подключение фильтра к баку и насосу</td>
                         </tr>
-                        <tr>
-                            <td>Ниппель латунный 1"</td>
-                            <td>Латунный</td>
-                            <td>1"</td>
-                            <td>2 шт.</td>
-                            <td>Соединение с фильтром</td>
-                        </tr>
-                        <tr>
-                            <td>Американка 1"</td>
-                            <td>Латунная</td>
-                            <td>1"</td>
-                            <td>2 шт.</td>
-                            <td>Быстрое разъединение фильтра</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
         <div class="section">
-            <h3>2.3. Соединение насоса</h3>
+            <h3>2.3. Соединение насоса, обратного клапана и фильтра тонкой очистки (40 мм)</h3>
             <div class="table-container">
-                <table>
+                <table class="table">
                     <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Тип фитинга</th>
-                            <th>Диаметр</th>
-                            <th>Количество</th>
-                            <th>Назначение</th>
+                        <tr class="table__row">
+                            <th class="table__header">Наименование</th>
+                            <th class="table__header">Тип фитинга</th>
+                            <th class="table__header">Диаметр</th>
+                            <th class="table__header">Количество</th>
+                            <th class="table__header">Назначение</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table__row">
                             <td>Переходник МПН 1" наружная</td>
                             <td>МПН (металл-ПНД)</td>
-                            <td>40 мм (1.5") → 1"</td>
+                            <td>1" → 40 мм</td>
                             <td>2 шт.</td>
-                            <td>Подключение насоса (вход/выход)</td>
+                            <td>Подключение насоса и обратного клапана</td>
                         </tr>
-                        <tr>
-                            <td>Ниппель латунный 1"</td>
-                            <td>Латунный</td>
-                            <td>1"</td>
-                            <td>2 шт.</td>
-                            <td>Соединение с насосом</td>
-                        </tr>
-                        <tr>
-                            <td>Американка 1"</td>
-                            <td>Латунная</td>
-                            <td>1"</td>
-                            <td>2 шт.</td>
-                            <td>Быстрое разъединение насоса</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>2.4. Соединение обратного клапана и фильтра тонкой очистки</h3>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Тип фитинга</th>
-                            <th>Диаметр</th>
-                            <th>Количество</th>
-                            <th>Назначение</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
+                        <tr class="table__row">
                             <td>Переходник МПН 1" наружная</td>
                             <td>МПН (металл-ПНД)</td>
-                            <td>40 мм (1.5") → 1"</td>
-                            <td>2 шт.</td>
-                            <td>Подключение обратного клапана и фильтра</td>
-                        </tr>
-                        <tr>
-                            <td>Ниппель латунный 1"</td>
-                            <td>Латунный</td>
-                            <td>1"</td>
-                            <td>4 шт.</td>
-                            <td>Соединение с оборудованием</td>
-                        </tr>
-                        <tr>
-                            <td>Американка 1"</td>
-                            <td>Латунная</td>
-                            <td>1"</td>
-                            <td>4 шт.</td>
-                            <td>Быстрое разъединение оборудования</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>2.6. Соединение предохранительного клапана</h3>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Тип фитинга</th>
-                            <th>Диаметр</th>
-                            <th>Количество</th>
-                            <th>Назначение</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Переходник МПН 1" наружная</td>
-                            <td>МПН (металл-ПНД)</td>
-                            <td>40 мм (1.5") → 1"</td>
+                            <td>1" → 40 мм</td>
                             <td>1 шт.</td>
-                            <td>Подключение предохранительного клапана</td>
+                            <td>Подключение фильтра тонкой очистки</td>
                         </tr>
-                        <tr>
-                            <td>Ниппель латунный 1"</td>
-                            <td>Латунный</td>
-                            <td>1"</td>
-                            <td>2 шт.</td>
-                            <td>Соединение с клапаном</td>
-                        </tr>
-                        <tr>
-                            <td>Американка 1"</td>
-                            <td>Латунная</td>
-                            <td>1"</td>
-                            <td>2 шт.</td>
-                            <td>Быстрое разъединение клапана</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>2.7. Соединение реле давления и манометра</h3>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Тип фитинга</th>
-                            <th>Диаметр</th>
-                            <th>Количество</th>
-                            <th>Назначение</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Тройник латунный 1"</td>
-                            <td>Латунный</td>
-                            <td>1"</td>
-                            <td>1 шт.</td>
-                            <td>Разветвление для реле давления и манометра</td>
-                        </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Переходник МПН 1" наружная</td>
                             <td>МПН (металл-ПНД)</td>
-                            <td>40 мм (1.5") → 1"</td>
+                            <td>1" → 40 мм</td>
                             <td>1 шт.</td>
                             <td>Подключение к магистрали</td>
                         </tr>
-                        <tr>
-                            <td>Ниппель латунный 1/4"</td>
-                            <td>Латунный</td>
-                            <td>1/4"</td>
-                            <td>1 шт.</td>
-                            <td>Подключение манометра</td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>2.4. Соединение реле давления и манометра</h3>
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr class="table__row">
+                            <th class="table__header">Наименование</th>
+                            <th class="table__header">Тип фитинга</th>
+                            <th class="table__header">Диаметр</th>
+                            <th class="table__header">Количество</th>
+                            <th class="table__header">Назначение</th>
                         </tr>
-                        <tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table__row">
                             <td>Ниппель латунный 1/4"</td>
                             <td>Латунный</td>
                             <td>1/4"</td>
-                            <td>1 шт.</td>
-                            <td>Подключение реле давления</td>
+                            <td>2 шт.</td>
+                            <td>Подключение реле давления и манометра</td>
                         </tr>
                     </tbody>
                 </table>
@@ -613,35 +475,35 @@
         <div class="section">
             <h3>3.1. Крепежные элементы</h3>
             <div class="table-container">
-                <table>
+                <table class="table">
                     <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Тип</th>
-                            <th>Количество</th>
-                            <th>Назначение</th>
+                        <tr class="table__row">
+                            <th class="table__header">Наименование</th>
+                            <th class="table__header">Тип</th>
+                            <th class="table__header">Количество</th>
+                            <th class="table__header">Назначение</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table__row">
                             <td>Хомуты ПНД 40 мм</td>
                             <td>Стальные с резиновой прокладкой</td>
                             <td>5 шт.</td>
                             <td>Крепление магистрали</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Хомуты ПНД 25 мм</td>
                             <td>Стальные с резиновой прокладкой</td>
                             <td>8 шт.</td>
                             <td>Крепление разводки</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Хомуты ПНД 20 мм</td>
                             <td>Стальные с резиновой прокладкой</td>
                             <td>6 шт.</td>
                             <td>Крепление к форсункам</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Дюбели и саморезы</td>
                             <td>Для хомутов</td>
                             <td>30 шт.</td>
@@ -655,35 +517,35 @@
         <div class="section">
             <h3>3.2. Уплотнительные материалы</h3>
             <div class="table-container">
-                <table>
+                <table class="table">
                     <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Тип</th>
-                            <th>Количество</th>
-                            <th>Назначение</th>
+                        <tr class="table__row">
+                            <th class="table__header">Наименование</th>
+                            <th class="table__header">Тип</th>
+                            <th class="table__header">Количество</th>
+                            <th class="table__header">Назначение</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table__row">
                             <td>ФУМ-лента</td>
                             <td>Уплотнительная</td>
                             <td>3 рулона</td>
                             <td>Уплотнение резьбовых соединений</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Лен сантехнический</td>
                             <td>Уплотнительный</td>
                             <td>1 упаковка</td>
                             <td>Уплотнение резьбовых соединений</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Паста сантехническая</td>
                             <td>Уплотнительная</td>
                             <td>1 туба</td>
                             <td>Уплотнение резьбовых соединений</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Тефлоновая лента</td>
                             <td>Уплотнительная</td>
                             <td>2 рулона</td>
@@ -697,32 +559,32 @@
         <div class="section">
             <h3>3.3. Трубы ПНД</h3>
             <div class="table-container">
-                <table>
+                <table class="table">
                     <thead>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Диаметр</th>
-                            <th>Длина</th>
-                            <th>Количество</th>
-                            <th>Назначение</th>
+                        <tr class="table__row">
+                            <th class="table__header">Наименование</th>
+                            <th class="table__header">Диаметр</th>
+                            <th class="table__header">Длина</th>
+                            <th class="table__header">Количество</th>
+                            <th class="table__header">Назначение</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="table__row">
                             <td>Труба ПНД</td>
                             <td>40 мм (1.5")</td>
                             <td>~10-15 м</td>
                             <td>1 бухта</td>
                             <td>Магистраль от насоса к распределительной коробке</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Труба ПНД</td>
                             <td>25 мм (1")</td>
                             <td>~20-30 м</td>
                             <td>1 бухта</td>
                             <td>Разводка к клапанам</td>
                         </tr>
-                        <tr>
+                        <tr class="table__row">
                             <td>Труба ПНД</td>
                             <td>20 мм (3/4")</td>
                             <td>~26-31 м</td>
@@ -734,7 +596,115 @@
             </div>
         </div>
 
-        <div class="warning">
+        <div class="section">
+            <h3>Схематичное отображение фитингов</h3>
+            <div style="display: flex; flex-direction: column; gap: 20px; font-size: 14px;">
+                
+                <!-- Магистраль 40 мм -->
+                <div style="border: 2px solid #666; padding: 15px; border-radius: 8px; background: #f9f9f9;">
+                    <h4 style="margin: 0 0 10px 0; color: #333;">Магистраль 40 мм</h4>
+                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                        <div style="background: #4CAF50; color: white; padding: 8px 12px; border-radius: 4px; font-weight: bold;">Бак</div>
+                        <span>→</span>
+                        <div style="background: #FF9800; color: white; padding: 8px 12px; border-radius: 4px;">МПН 1"</div>
+                        <span>→</span>
+                        <div style="background: #2196F3; color: white; padding: 8px 12px; border-radius: 4px;">Муфта</div>
+                        <span>→</span>
+                        <div style="background: #2196F3; color: white; padding: 8px 12px; border-radius: 4px;">Тройник</div>
+                        <span>→</span>
+                        <div style="background: #2196F3; color: white; padding: 8px 12px; border-radius: 4px;">Редукция 40-25</div>
+                        <span>→</span>
+                        <div style="background: #4CAF50; color: white; padding: 8px 12px; border-radius: 4px; font-weight: bold;">Клапаны</div>
+                    </div>
+                </div>
+
+                <!-- Разводка 25 мм -->
+                <div style="border: 2px solid #666; padding: 15px; border-radius: 8px; background: #e3f2fd;">
+                    <h4 style="margin: 0 0 10px 0; color: #333;">Разводка к клапанам 25 мм</h4>
+                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                        <div style="background: #4CAF50; color: white; padding: 8px 12px; border-radius: 4px; font-weight: bold;">Редукция</div>
+                        <span>→</span>
+                        <div style="background: #2196F3; color: white; padding: 8px 12px; border-radius: 4px;">Тройник 25</div>
+                        <span>→</span>
+                        <div style="background: #2196F3; color: white; padding: 8px 12px; border-radius: 4px;">Муфта</div>
+                        <span>→</span>
+                        <div style="background: #FF9800; color: white; padding: 8px 12px; border-radius: 4px;">МПН 3/4"</div>
+                        <span>→</span>
+                        <div style="background: #9C27B0; color: white; padding: 8px 12px; border-radius: 4px; font-weight: bold;">Клапан</div>
+                    </div>
+                </div>
+
+                <!-- Соединения к форсункам -->
+                <div style="border: 2px solid #666; padding: 15px; border-radius: 8px; background: #fff3e0;">
+                    <h4 style="margin: 0 0 10px 0; color: #333;">К форсункам (прямой переход)</h4>
+                    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                        <div style="background: #9C27B0; color: white; padding: 8px 12px; border-radius: 4px; font-weight: bold;">Клапан</div>
+                        <span>→</span>
+                        <div style="background: #FF9800; color: white; padding: 8px 12px; border-radius: 4px;">Ниппель 1/2"</div>
+                        <span>→</span>
+                        <div style="background: #2196F3; color: white; padding: 8px 12px; border-radius: 4px;">ПНД 25-1/2"</div>
+                        <span>→</span>
+                        <div style="background: #E91E63; color: white; padding: 8px 12px; border-radius: 4px; font-weight: bold;">Форсунка</div>
+                    </div>
+                </div>
+
+                <!-- Надземная часть -->
+                <div style="border: 2px solid #666; padding: 15px; border-radius: 8px; background: #f3e5f5;">
+                    <h4 style="margin: 0 0 10px 0; color: #333;">Надземная часть (соединение оборудования)</h4>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                            <div style="background: #4CAF50; color: white; padding: 8px 12px; border-radius: 4px; font-weight: bold;">Насос</div>
+                            <span>↔</span>
+                            <div style="background: #FF9800; color: white; padding: 8px 12px; border-radius: 4px;">МПН 1"</div>
+                            <span>↔</span>
+                            <div style="background: #795548; color: white; padding: 8px 12px; border-radius: 4px;">Ниппель 1"</div>
+                            <span>↔</span>
+                            <div style="background: #607D8B; color: white; padding: 8px 12px; border-radius: 4px;">Американка 1"</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                            <div style="background: #4CAF50; color: white; padding: 8px 12px; border-radius: 4px; font-weight: bold;">Реле</div>
+                            <span>↔</span>
+                            <div style="background: #795548; color: white; padding: 8px 12px; border-radius: 4px;">Тройник 3/4"</div>
+                            <span>↔</span>
+                            <div style="background: #795548; color: white; padding: 8px 12px; border-radius: 4px;">Ниппель 1/4"</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Легенда -->
+                <div style="background: #e0e0e0; padding: 15px; border-radius: 8px;">
+                    <h4 style="margin: 0 0 10px 0; color: #333;">Легенда</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; font-size: 13px;">
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <div style="width: 20px; height: 20px; background: #4CAF50; border-radius: 4px;"></div>
+                            <span>Оборудование</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <div style="width: 20px; height: 20px; background: #2196F3; border-radius: 4px;"></div>
+                            <span>ПНД фитинги</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <div style="width: 20px; height: 20px; background: #FF9800; border-radius: 4px;"></div>
+                            <span>МПН переходники</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <div style="width: 20px; height: 20px; background: #795548; border-radius: 4px;"></div>
+                            <span>Латунные фитинги</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <div style="width: 20px; height: 20px; background: #607D8B; border-radius: 4px;"></div>
+                            <span>Американки</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <div style="width: 20px; height: 20px; background: #9C27B0; border-radius: 4px;"></div>
+                            <span>Клапаны</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fittings-spec__warning">
             <h4>⚠️ Важные примечания</h4>
             <p><strong>1. Тип фитингов:</strong> Рекомендуются компрессионные фитинги для простоты монтажа и демонтажа. Сварные фитинги требуют специального оборудования и не рекомендуются для систем с частым обслуживанием.</p>
             <p><strong>2. Переходники МПН:</strong> Используйте качественные латунные переходники МПН для надежного соединения ПНД труб с металлическими компонентами.</p>
@@ -743,7 +713,7 @@
             <p><strong>5. Консервация:</strong> Дренажный клапан устанавливается в нижней точке системы для полного слива воды на зиму.</p>
         </div>
 
-        <div class="total">
+        <div class="fittings-spec__total">
             <h4>✅ Итоговая спецификация</h4>
             <p><strong>Трубы ПНД:</strong> ~56-75 м суммарно (40 мм, 25 мм, 20 мм + 16.1м дренаж)</p>
             <p><strong>Фитинги ПНД компрессионные:</strong> ~30-35 шт. (включая дренаж, 4 клапана)</p>
@@ -756,7 +726,7 @@
             <p><strong>Уплотнительные материалы:</strong> ФУМ-лента, лен, паста, тефлоновая лента</p>
         </div>
 
-        <div class="note">
+        <div class="fittings-spec__note">
             <h4>💡 Рекомендации по закупке</h4>
             <p><strong>1. Бренд:</strong> Рекомендуется приобретать фитинги одного производителя для обеспечения совместимости.</p>
             <p><strong>2. Запас:</strong> Рекомендуется приобретать фитинги с запасом 10-15% на случай ошибок монтажа.</p>
@@ -764,5 +734,11 @@
             <p><strong>4. Инструменты:</strong> Для компрессионных фитингов потребуется ключ для ПНД труб (обычно 32-40 мм).</p>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">© 2026 Система автополива. Все права защищены.</p>
+        </div>
+    </footer>
 </body>
 </html>
