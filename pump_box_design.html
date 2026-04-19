@@ -16,6 +16,7 @@
                 <li><a href="equipment_connection_scheme.html" class="nav__link">Схема подключения</a></li>
                 <li><a href="sprinkler_plan.html" class="nav__link">План полива</a></li>
                 <li><a href="pump_box_design.html" class="nav__link">Чертеж ящика</a></li>
+                <li><a href="estimate.html" class="nav__link">Смета</a></li>
             </ul>
         </div>
     </nav>
@@ -29,19 +30,43 @@
 
     <div class="container">
         <div class="section">
-            <h2 class="section__title">3D модель ящика</h2>
+            <h2 class="section__title">3D модель ящика с перемычками</h2>
             <div class="box-drawing">
                 <div class="box-drawing__3d">
                     <div class="box-drawing__inner">
                         <div class="box-drawing__face box-drawing__face--front">
                             Передняя стенка
                             <div class="box-drawing__door">Дверь 350×1900</div>
+                            <div style="position: absolute; top: 100px; left: 10px; right: 10px; height: 5px; background: #666;"></div>
+                            <div style="position: absolute; top: 240px; left: 10px; right: 10px; height: 5px; background: #666;"></div>
+                            <div style="position: absolute; top: 380px; left: 10px; right: 10px; height: 5px; background: #666;"></div>
                         </div>
-                        <div class="box-drawing__face box-drawing__face--back">Задняя стенка</div>
-                        <div class="box-drawing__face box-drawing__face--left">Левая стенка</div>
-                        <div class="box-drawing__face box-drawing__face--right">Правая стенка</div>
-                        <div class="box-drawing__face box-drawing__face--top">Крышка</div>
-                        <div class="box-drawing__face box-drawing__face--bottom">Дно</div>
+                        <div class="box-drawing__face box-drawing__face--back">
+                            Задняя стенка
+                            <div style="position: absolute; top: 100px; left: 10px; right: 10px; height: 5px; background: #666;"></div>
+                            <div style="position: absolute; top: 240px; left: 10px; right: 10px; height: 5px; background: #666;"></div>
+                            <div style="position: absolute; top: 380px; left: 10px; right: 10px; height: 5px; background: #666;"></div>
+                        </div>
+                        <div class="box-drawing__face box-drawing__face--left">
+                            Левая стенка
+                            <div style="position: absolute; top: 100px; left: 10px; right: 10px; height: 5px; background: #666;"></div>
+                            <div style="position: absolute; top: 240px; left: 10px; right: 10px; height: 5px; background: #666;"></div>
+                            <div style="position: absolute; top: 380px; left: 10px; right: 10px; height: 5px; background: #666;"></div>
+                        </div>
+                        <div class="box-drawing__face box-drawing__face--right">
+                            Правая стенка
+                            <div style="position: absolute; top: 100px; left: 10px; right: 10px; height: 5px; background: #666;"></div>
+                            <div style="position: absolute; top: 240px; left: 10px; right: 10px; height: 5px; background: #666;"></div>
+                            <div style="position: absolute; top: 380px; left: 10px; right: 10px; height: 5px; background: #666;"></div>
+                        </div>
+                        <div class="box-drawing__face box-drawing__face--top">
+                            Крышка
+                            <div style="position: absolute; top: 50%; left: 10px; right: 10px; height: 5px; background: #666; transform: translateY(-50%);"></div>
+                        </div>
+                        <div class="box-drawing__face box-drawing__face--bottom">
+                            Дно
+                            <div style="position: absolute; top: 50%; left: 10px; right: 10px; height: 5px; background: #666; transform: translateY(-50%);"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -71,25 +96,29 @@
                         Левая стенка
                         <br>
                         400×2000 мм
+                        <br>
+                        <small>Перемычки: 60×30 мм (3 шт. на высоте 500, 1200, 1900 мм)</small>
                     </div>
                     <div class="box-drawing__panel box-drawing__panel--side">
                         Правая стенка
                         <br>
                         400×2000 мм
+                        <br>
+                        <small>Перемычки: 60×30 мм (3 шт. на высоте 500, 1200, 1900 мм)</small>
                     </div>
                     <div class="box-drawing__panel box-drawing__panel--top">
                         Крышка
                         <br>
                         400×400 мм
                         <br>
-                        <small>Перемычки: 60×30 мм (2 шт. горизонтальные по центру)</small>
+                        <small>Перемычки: 60×30 мм (1 шт. горизонтальная по центру)</small>
                     </div>
                     <div class="box-drawing__panel box-drawing__panel--bottom">
                         Дно
                         <br>
                         400×400 мм
                         <br>
-                        <small>Перемычки: 60×30 мм (2 шт. горизонтальные по центру)</small>
+                        <small>Перемычки: 60×30 мм (1 шт. горизонтальная по центру)</small>
                     </div>
                 </div>
             </div>
@@ -102,8 +131,10 @@
                 <ul class="specs__list">
                     <li class="specs__list-item"><span class="specs__list-item--highlight">Передняя стенка:</span> 3 шт. на высоте 500, 1200, 1900 мм</li>
                     <li class="specs__list-item"><span class="specs__list-item--highlight">Задняя стенка:</span> 3 шт. на высоте 500, 1200, 1900 мм</li>
-                    <li class="specs__list-item"><span class="specs__list-item--highlight">Крышка:</span> 2 шт. горизонтальные по центру</li>
-                    <li class="specs__list-item"><span class="specs__list-item--highlight">Дно:</span> 2 шт. горизонтальные по центру</li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Левая стенка:</span> 3 шт. на высоте 500, 1200, 1900 мм</li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Правая стенка:</span> 3 шт. на высоте 500, 1200, 1900 мм</li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Крышка:</span> 1 шт. горизонтальная по центру</li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Дно:</span> 1 шт. горизонтальная по центру</li>
                 </ul>
             </div>
             <div class="specs">
@@ -155,11 +186,11 @@
                 </div>
                 <div class="box-drawing__profile-row">
                     <span>Профиль 60×30 мм:</span>
-                    <span>10 шт. (4 стойки по 2060 мм + 6 перемычек по 400 мм)</span>
+                    <span>17 шт. (4 стойки по 2060 мм + 13 перемычек по 400 мм)</span>
                 </div>
                 <div class="box-drawing__profile-row">
                     <span>Саморезы/болты:</span>
-                    <span>50-60 шт.</span>
+                    <span>70-80 шт.</span>
                 </div>
                 <div class="box-drawing__profile-row">
                     <span>Петли дверные:</span>
