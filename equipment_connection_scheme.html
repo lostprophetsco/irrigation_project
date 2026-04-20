@@ -113,16 +113,49 @@
                 <small>поверхностный с самовсасыванием</small>
             </div>
             <div class="scheme__arrow">↓</div>
-            <div class="scheme__component scheme__component--check-valve">Обратный клапан</div>
+            <div class="scheme__component scheme__component--check-valve">
+                <strong>Обратный клапан</strong><br>
+                <small>(G1 1/2", Ду40)</small>
+            </div>
             <div class="scheme__arrow">↓</div>
             <div class="scheme__component" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
                 <strong>Фильтр тонкой очистки</strong><br>
-                <small>(50-80 мкм)</small>
+                <small>(F50YD 1 1/2", 130 мкм)</small>
             </div>
             <div class="scheme__arrow">↓</div>
-            <div class="scheme__component scheme__component--pressure-switch">Реле давления</div>
+            <div class="scheme__component" style="background: linear-gradient(135deg, #ff6b6b 0%, #ffa06b 100%); color: white;">
+                <strong>Тройник G1 1/2" с отводом 1/4"</strong><br>
+                <small>(разделение потока)</small>
+            </div>
             <div class="scheme__arrow">↓</div>
-            <div class="scheme__component scheme__component--manometer">Манометр</div>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <div style="flex: 1; text-align: center;">
+                    <div style="color: #666; font-size: 0.9em; margin-bottom: 5px;">Основной поток G1 1/2"</div>
+                    <div class="scheme__arrow">↓</div>
+                    <div class="scheme__component" style="background: #4caf50; color: white;">
+                        <strong>МПН G1 1/2" → 40 мм</strong><br>
+                        <small>(переход на магистраль)</small>
+                    </div>
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    <div style="color: #666; font-size: 0.9em; margin-bottom: 5px;">Отвод 1/4"</div>
+                    <div class="scheme__arrow">↓</div>
+                    <div class="scheme__component scheme__component--pressure-switch">
+                        <strong>Реле давления</strong><br>
+                        <small>(через ниппель G1 1/2"→1/4")</small>
+                    </div>
+                    <div class="scheme__arrow">↓</div>
+                    <div class="scheme__component scheme__component--manometer">
+                        <strong>Манометр</strong><br>
+                        <small>(через ниппель 1/4")</small>
+                    </div>
+                    <div class="scheme__arrow">↓</div>
+                    <div class="scheme__component" style="background: #999; color: white;">
+                        <strong>Заглушка 1/4"</strong><br>
+                        <small>(глухой конец)</small>
+                    </div>
+                </div>
+            </div>
             <div class="scheme__arrow">↓</div>
             <div class="scheme__component" style="background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%); color: white;">
                 <strong>Ящик для насоса</strong><br>
@@ -262,16 +295,18 @@
             <div class="specs">
                 <h4>На насосе (1" выход):</h4>
                 <ul class="specs__list">
-                    <li class="specs__list-item"><span class="specs__list-item--highlight">Переходник 1" - 40 мм:</span> 1 шт. (выход насоса на ПНД магистраль)</li>
-                    <li class="specs__list-item"><span class="specs__list-item--highlight">Муфта резьбовая 1":</span> 2-3 шт. (соединения с фитингами)</li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Редуктор G1→G1 1/2":</span> 1 шт. (переход с насоса на обратный клапан G1 1/2")</li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Муфта резьбовая G1 1/2":</span> 2-3 шт. (соединения с фитингами)</li>
                 </ul>
             </div>
 
             <div class="specs">
-                <h4>На фильтрах и реле:</h4>
+                <h4>На фильтрах и реле (после насоса):</h4>
                 <ul class="specs__list">
-                    <li class="specs__list-item"><span class="specs__list-item--highlight">Муфты резьбовые 3/4" - 1":</span> 4-6 шт. (соединения фильтров, реле, манометра)</li>
-                    <li class="specs__list-item"><span class="specs__list-item--highlight">Тройник латунный 3/4":</span> 1-2 шт. (для манометра и реле давления)</li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Тройник G1 1/2" с отводом 1/4":</span> 1 шт. (для реле давления и манометра)</li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Ниппель G1 1/2"→1/4":</span> 1 шт. (переход с тройника на реле давления)</li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">Ниппель 1/4":</span> 1 шт. (переход с реле давления на манометр)</li>
+                    <li class="specs__list-item"><span class="specs__list-item--highlight">МПН G1 1/2" наружная → 40 мм:</span> 1 шт. (подключение фильтра к магистрали)</li>
                 </ul>
             </div>
         </div>
@@ -440,8 +475,9 @@
             <h3>5. Обратный клапан</h3>
             <div class="specs">
                 <ul>
-                    <li><strong>Тип:</strong> Обратный клапан с пружиной</li>
-                    <li><strong>Установка:</strong> После насоса, перед фильтром тонкой очистки</li>
+                    <li><strong>Тип:</strong> Обратный клапан с пружиной (Genebre 318008)</li>
+                    <li><strong>Размер:</strong> G1 1/2" (Ду40)</li>
+                    <li><strong>Установка:</strong> После насоса (через редуктор G1→G1 1/2"), перед тройником</li>
                     <li><strong>Назначение:</strong> Предотвращение обратного потока воды</li>
                 </ul>
             </div>
@@ -449,21 +485,35 @@
         </div>
 
         <div class="section">
-            <h3>6. Фильтр тонкой очистки (в главной магистрали)</h3>
+            <h3>6. Тройник G1 1/2" с отводом 1/4"</h3>
             <div class="specs">
                 <ul>
-                    <li><strong>Тип:</strong> Сетчатый фильтр (с наименьшей потерей давления)</li>
-                    <li><strong>Тонкость:</strong> 50-80 мкм</li>
-                    <li><strong>Установка:</strong> После обратного клапана, перед реле давления (в главной магистрали)</li>
-                    <li><strong>Назначение:</strong> Защита форсунок от мелких частиц</li>
-                    <li><strong>Потеря давления:</strong> 0.2-0.4 бар (на чистом фильтре)</li>
+                    <li><strong>Тип:</strong> Латунный тройник с отводом 1/4"</li>
+                    <li><strong>Размер:</strong> G1 1/2" (основной поток) + 1/4" (отвод)</li>
+                    <li><strong>Установка:</strong> После обратного клапана</li>
+                    <li><strong>Назначение:</strong> Разделение потока: основной поток к фильтру и магистрали, отвод 1/4" к реле давления и манометру</li>
                 </ul>
             </div>
-            <p><strong>Почему нужен:</strong> Защищает форсунки Hunter от мелких частиц, которые могут пройти через фильтры грубой очистки. Предотвращает засорение форсунок и неравномерный полив. Увеличивает срок службы форсунок. Установка в главной магистрали позволяет защитить все зоны одновременно. Сетчатый фильтр имеет минимальную потерю давления по сравнению с дисковыми.</p>
+            <p><strong>Почему нужен:</strong> Позволяет подключить реле давления и манометр без сужения основного потока, избегая бутылочного горлышка в магистрали.</p>
         </div>
 
         <div class="section">
-            <h3>7. Реле давления</h3>
+            <h3>7. Фильтр тонкой очистки (в главной магистрали)</h3>
+            <div class="specs">
+                <ul>
+                    <li><strong>Тип:</strong> Дисковый фильтр F50YD (Raifil)</li>
+                    <li><strong>Размер:</strong> 1 1/2" BSP</li>
+                    <li><strong>Тонкость:</strong> 130 мкм</li>
+                    <li><strong>Производительность:</strong> до 14 м³/ч</li>
+                    <li><strong>Установка:</strong> После обратного клапана, перед тройником</li>
+                    <li><strong>Назначение:</strong> Защита форсунок, реле давления и манометра от мелких частиц</li>
+                </ul>
+            </div>
+            <p><strong>Почему нужен:</strong> Защищает форсунки Hunter от мелких частиц, которые могут пройти через фильтры грубой очистки. Предотвращает засорение форсунок и неравномерный полив. Установка перед тройником также защищает реле давления и манометр от частиц. Увеличивает срок службы оборудования.</p>
+        </div>
+
+        <div class="section">
+            <h3>8. Реле давления</h3>
             <div class="important">
                 <h4>⚠️ Критически важно для автоматической работы системы</h4>
                 <p>Бак сам по себе не создает давление. Для подачи воды к форсункам Hunter (требуют 30 PSI ≈ 2.07 бар) необходим насос с реле давления.</p>
@@ -478,7 +528,7 @@
                         <li>Выключение насоса (P_max): 4.5 бар</li>
                         <li>Дифференциал (ΔP): 2.0 бар</li>
                     </ul>
-                    <li><strong>Установка:</strong> После фильтра тонкой очистки, перед магистралью</li>
+                    <li><strong>Установка:</strong> На отводе 1/4" тройника (через ниппель G1 1/2"→1/4")</li>
                 </ul>
             </div>
             <div class="specs">
@@ -494,19 +544,19 @@
         </div>
 
         <div class="section">
-            <h3>8. Манометр</h3>
+            <h3>9. Манометр</h3>
             <div class="specs">
                 <ul>
                     <li><strong>Тип:</strong> Механический манометр</li>
                     <li><strong>Диапазон:</strong> 0-6 бар</li>
-                    <li><strong>Установка:</strong> После реле давления</li>
+                    <li><strong>Установка:</strong> После реле давления (через ниппель 1/4")</li>
                     <li><strong>Назначение:</strong> Визуальный контроль давления в системе</li>
                 </ul>
             </div>
         </div>
 
         <div class="section">
-            <h3>9. Дренажный клапан (опционально, но рекомендуется)</h3>
+            <h3>10. Дренажный клапан (опционально, но рекомендуется)</h3>
             <div class="specs">
                 <ul>
                     <li><strong>Тип:</strong> Шаровой кран</li>
