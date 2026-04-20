@@ -124,30 +124,43 @@
             <div class="scheme__arrow">↓</div>
             <div class="scheme__component scheme__component--manometer">Манометр</div>
             <div class="scheme__arrow">↓</div>
-            <div class="scheme__component scheme__component--magistral">
-                <strong>Магистраль (40 мм ПНД)</strong><br>
-                <small>→ Тройник (разветвление)</small>
+            <div class="scheme__component" style="background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%); color: white;">
+                <strong>Ящик для насоса</strong><br>
+                <small>Разделение магистрали на 2 линии</small>
             </div>
             <div class="scheme__arrow">↓</div>
             <div style="display: flex; gap: 20px;">
-                <div class="scheme__component scheme__component--distribution" style="flex: 1;">
-                    <strong>Распределительная коробка 1</strong><br>
-                    <small>(3 клапана для газона)</small>
+                <div style="flex: 1;">
+                    <div class="scheme__component scheme__component--magistral">
+                        <strong>Линия 1 (40 мм ПНД)</strong><br>
+                        <small>в землю → Распределительная коробка 1</small>
+                    </div>
+                    <div class="scheme__arrow">↓</div>
+                    <div class="scheme__component scheme__component--distribution">
+                        <strong>Распределительная коробка 1</strong><br>
+                        <small>(3 клапана для газона)</small>
+                    </div>
+                    <div class="scheme__arrow">↓</div>
+                    <div class="scheme__component scheme__component--sprinklers">
+                        <strong>Форсунки газона</strong><br>
+                        <small>3 шт. (MP1000, MP2000, MP2000)</small>
+                    </div>
                 </div>
-                <div class="scheme__component scheme__component--distribution" style="flex: 1;">
-                    <strong>Распределительная коробка 2</strong><br>
-                    <small>(1 клапан для грядок)</small>
-                </div>
-            </div>
-            <div class="scheme__arrow">↓</div>
-            <div style="display: flex; gap: 20px;">
-                <div class="scheme__component scheme__component--sprinklers" style="flex: 1;">
-                    <strong>Форсунки газона</strong><br>
-                    <small>3 шт. (MP1000, MP2000, MP2000)</small>
-                </div>
-                <div class="scheme__component scheme__component--sprinklers" style="flex: 1;">
-                    <strong>Стрип-спринклеры грядок</strong><br>
-                    <small>2 шт. (SS-530)</small>
+                <div style="flex: 1;">
+                    <div class="scheme__component scheme__component--magistral">
+                        <strong>Линия 2 (40 мм ПНД)</strong><br>
+                        <small>в землю → Распределительная коробка 2</small>
+                    </div>
+                    <div class="scheme__arrow">↓</div>
+                    <div class="scheme__component scheme__component--distribution">
+                        <strong>Распределительная коробка 2</strong><br>
+                        <small>(1 клапан для грядок)</small>
+                    </div>
+                    <div class="scheme__arrow">↓</div>
+                    <div class="scheme__component scheme__component--sprinklers">
+                        <strong>Стрип-спринклеры грядок</strong><br>
+                        <small>2 шт. (SS-530)</small>
+                    </div>
                 </div>
             </div>
         </div>
